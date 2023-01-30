@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Main from './pages/Main/Main';
+import Router from './Router';
 import './styles/reset.scss';
 import './styles/common.scss';
+import { OverlayContextProvider } from './context/overlay-context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Main />);
+root.render(
+  <OverlayContextProvider>
+    <Router />
+  </OverlayContextProvider>
+);
