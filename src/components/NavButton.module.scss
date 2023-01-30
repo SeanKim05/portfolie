@@ -1,0 +1,41 @@
+.nav_button {
+  width: 23rem;
+  height: 6rem;
+  font-size: 6rem;
+  font-weight: 550;
+  background: none;
+  font-size: 1.4rem;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.nav_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.nav_button span:after {
+  content: '☕';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -2rem;
+  transition: 0.5s;
+}
+
+.nav_button:hover {
+  background-color: rgb(25, 25, 25);
+  border: none;
+}
+
+.nav_button:hover span {
+  padding-right: 2rem;
+}
+
+.nav_button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
