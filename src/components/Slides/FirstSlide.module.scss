@@ -8,24 +8,39 @@
   color: rgb(196, 196, 196);
   background-color: none;
   .caption_wrapper {
-    // position: absolute;
     display: flex;
     flex-direction: column;
     z-index: 1;
-    h1 {
+    h2 {
       font-size: 3rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      line-height: 1.5;
     }
     p {
       font-size: 2rem;
-      line-height: 1.5;
+      line-height: 1.3;
     }
     .bolder_text {
+      width: 60%;
       margin-top: 1rem;
       font-weight: 800;
       font-size: 3.5rem;
       text-decoration: underline;
+      text-underline-offset: 0.5rem;
+      line-height: 1.3;
+    }
+    .spoiler {
+      color: transparent;
+      background-position: right;
+      background-size: 100% 100%;
+      background-image: linear-gradient(#a0aec0, #a0aec0);
+      display: inline;
+      background-repeat: no-repeat;
+      transition: all 500ms ease-in-out;
+    }
+    .spoiler:hover {
+      color: rgb(255, 255, 255, 0.8);
+      background-size: 0% 100%;
     }
   }
 }

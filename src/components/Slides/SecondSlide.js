@@ -9,7 +9,7 @@ const SecondSlide = props => {
         <img className={classes.img_wrapper} src={caption_img} alt="등산" />
         <figcaption className={classes.caption_wrapper}>
           <h1>{props.title}</h1>
-          <p>{props.text[0]}</p>
+          <h2>{props.text[0]}</h2>
           <p>{props.text[1]}</p>
         </figcaption>
       </figure>

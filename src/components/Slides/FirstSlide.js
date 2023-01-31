@@ -6,8 +6,10 @@ const FirstSlide = props => {
   return (
     <section className={classes.main_container}>
       <div className={classes.caption_wrapper}>
-        <h1 className={classes.bolder_text}>{props.title}</h1>
-        <h1>{props.text[0]}</h1>
+        <h1 className={`${classes.bolder_text} ${classes.spoiler}`}>
+          {props.title}
+        </h1>
+        <h2>{props.text[0]}</h2>
         <p>{props.text[1]}</p>
       </div>
       <video loop autoPlay muted>
