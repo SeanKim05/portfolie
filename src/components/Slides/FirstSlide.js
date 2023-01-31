@@ -4,15 +4,16 @@ import NavButton from '../../components/NavButton';
 
 const FirstSlide = props => {
   return (
-    <div className={classes.main_container}>
+    <section className={classes.main_container}>
       <div className={classes.caption_wrapper}>
-        <h1>{props.title}</h1>
-        <p>{props.text}</p>
+        <h1 className={classes.bolder_text}>{props.title}</h1>
+        <h1>{props.text[0]}</h1>
+        <p>{props.text[1]}</p>
       </div>
       <video loop autoPlay muted>
         <source src={Video} alt="coffee_bean" type="video/mp4" />
       </video>
-    </div>
+    </section>
   );
 };
 

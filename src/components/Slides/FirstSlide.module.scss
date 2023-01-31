@@ -8,6 +8,7 @@
   color: rgb(196, 196, 196);
   background-color: none;
   .caption_wrapper {
+    // position: absolute;
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -18,18 +19,23 @@
     }
     p {
       font-size: 2rem;
-      display: flex;
-      flex-direction: column;
-      line-height: 120%;
+      line-height: 1.5;
     }
-    // animation: left_slide 2s;
+    .bolder_text {
+      margin-top: 1rem;
+      font-weight: 800;
+      font-size: 3.5rem;
+      text-decoration: underline;
+    }
   }
-  // @keyframes left_slide {
-  //   from {
-  //     left: -4rem;
-  //   }
-  //   to {
-  //     left: 10rem;
-  //   }
-  // }
+}
+video {
+  object-fit: cover;
+  z-index: -3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.2;
 }
