@@ -2,10 +2,10 @@ import React, { useContext, useState } from 'react';
 import classes from './DetailedNavigation.module.scss';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import OverlayContext from '../../context/overlay-context';
+import NavContext from '../../context/nav-context';
 
 const DetailedNavigation = () => {
-  const overlayCtx = useContext(OverlayContext);
+  const overlayCtx = useContext(NavContext);
   console.log(overlayCtx.clicked);
 
   return (
