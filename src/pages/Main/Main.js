@@ -1,8 +1,26 @@
-import React from 'react';
-import classe from './Main.module.scss';
+import React, { useContext, useEffect } from 'react';
+import classes from './Main.module.scss';
+import NavContext from '../../context/nav-context';
+import FirstSlide from '../../components/Slides/FirstSlide';
+import ImChangeComp from '../../components/Main/ImChangeComp';
 
 const Main = () => {
-  return <div className={classe.main_container}>main</div>;
+  const navCtx = useContext(NavContext);
+  useEffect(() => {
+    window.scrollTo(0, 1);
+    window.addEventListener('scroll', () => {
+      let value = window.scrollY;
+      navCtx.scrollHandler(value);
+    });
+  }, []);
+
+  return (
+    <>
+      <div className={classes.body}>
+        <ImChangeComp />
+      </div>
+    </>
+  );
 };
 
 export default Main;
