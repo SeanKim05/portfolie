@@ -20,8 +20,14 @@
       width: 10rem;
       height: 10rem;
     }
-    .dev_link :first-child {
-      margin-right: 0.5rem;
+    .dev_link_icon {
+      width: 10rem;
+      svg {
+        margin-right: 1rem;
+      }
+    }
+    .menu_icon {
+      width: 10rem;
     }
   }
 }

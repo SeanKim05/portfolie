@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import FirstSlide from '../../components/Slides/FirstSlide';
 import SecondSlide from '../../components/Slides/SecondSlide';
 import ThirdSlide from '../../components/Slides/ThirdSlide';
 import NavContext from '../../context/nav-context';
-import styles from './Slide.module.scss';
+import classes from './Slide.module.scss';
 
-const data = [
+const slideData = [
   {
     id: 0,
     title: '정상에 오를 수 있을까?',
@@ -42,15 +42,15 @@ function Mainpage() {
   });
 
   return (
-    <div className={styles.main_container} id="main_slideY">
+    <div className={classes.main_container} id="main_slideY">
       <section>
-        <FirstSlide title={data[0].title} text={data[0].text} />
+        <FirstSlide title={slideData[0].title} text={slideData[0].text} />
       </section>
       <section>
-        <SecondSlide title={data[1].title} text={data[1].text} />
+        <SecondSlide title={slideData[1].title} text={slideData[1].text} />
       </section>
       <section>
-        <ThirdSlide title={data[2].title} text={data[2].text} />
+        <ThirdSlide title={slideData[2].title} text={slideData[2].text} />
       </section>
     </div>
   );

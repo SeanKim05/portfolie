@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 const NavContext = React.createContext({
   clicked: false,
   navClickedHandler: () => {},
+  scrollHandler: () => {},
+  yScrollVal: 1,
 });
 
 export const NavContextProvider = props => {

@@ -19,18 +19,19 @@ function Navigation() {
       ) : (
         <nav className={classes.nav_container}>
           <div className={classes.default_nav_wrapper}>
-            <div>
+            <div className={classes.menu_icon}>
               <FaBars
                 alt="menu_bar"
                 onClick={() => navCtx.navClickedHandler(true)}
               />
             </div>
+
             <img
-              style={{ opacity: 1 / navCtx.yScrollVal }}
+              style={{ opacity: 60 / navCtx.yScrollVal }}
               src={logo}
               alt="메인로고"
             />
-            <div className={classes.dev_link}>
+            <div className={classes.dev_link_icon}>
               <a href="https://github.com/SeanKim05">
                 <FaGithub alt="github" />
               </a>
