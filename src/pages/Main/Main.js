@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import classes from './Main.module.scss';
 import NavContext from '../../context/nav-context';
-import FirstSlide from '../../components/Slides/FirstSlide';
 import ImChangeComp from '../../components/Main/ImChangeComp';
 
 const Main = () => {
