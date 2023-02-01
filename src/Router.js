@@ -12,7 +12,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Slide />} />
         <Route path="/main" element={<Main />} />
-        <Route path="/hash_detail/:id" element={<HashTag />} />
+        <Route path="/hash_detail/:tag_id" element={<HashTag />} />
       </Routes>
     </BrowserRouter>
   );

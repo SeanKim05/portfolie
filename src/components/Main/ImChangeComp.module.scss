@@ -1,14 +1,16 @@
 .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   opacity: 0.9;
+  width: 100%;
+  background-image: url('../../assets/images/my_img.jpg');
+  background-size: cover;
 }
 .img_wrapper {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
   .img_block {
     display: flex;
     align-items: center;
@@ -17,7 +19,8 @@
     height: 60%;
     background-color: white;
     img {
-      width: 80%;
+      height: 100%;
+      width: 100%;
     }
   }
 }
@@ -25,12 +28,13 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
-  line-height: 1.3;
   justify-content: center;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin-left: 10%;
   h1 {
     font-weight: 800;
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   .changing_text_block {
     display: flex;
@@ -41,7 +45,6 @@
       color: black;
       padding: 0.5rem;
       font-weight: 800;
-      font-size: 3.5rem;
       text-decoration: underline;
       text-underline-offset: 0.5rem;
       line-height: 1.2;
@@ -49,18 +52,18 @@
   }
   .hash_tag_block {
     display: flex;
-    font-size: 1.5rem;
-    opacity: 0.7;
+    font-size: 1.2rem;
     font-style: italic;
-
-    li {
+    a {
+      text-decoration: none;
+      color: inherit;
       margin-right: 0.5rem;
+      cursor: pointer;
     }
   }
 
   .introduce_text {
     margin: 1rem 0;
-    font-size: 1.8rem;
-    opacity: 0.8;
+    font-size: 1.3rem;
   }
 }
