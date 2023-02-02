@@ -9,7 +9,6 @@ function ImChangeComp({ hashtags }) {
   const shuffle = useCallback(() => {
     const index = Math.floor(Math.random() * hashtags.length);
     setnewName(hashtags[index].tag);
-    console.log(hashtags);
   }, []);
 
   useEffect(() => {

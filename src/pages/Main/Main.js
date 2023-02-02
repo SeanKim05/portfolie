@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import classes from './Main.module.scss';
 import NavContext from '../../context/nav-context';
 import ImChangeComp from '../../components/Main/ImChangeComp';
+import DayCounter from '../../components/Main/DayCounter';
 import MOCK_DATA from '../../data/mock.json';
 
 const hashtags = MOCK_DATA.hashtags;
@@ -17,17 +18,20 @@ const hashtags = MOCK_DATA.hashtags;
 const Main = () => {
   const navCtx = useContext(NavContext);
   useEffect(() => {
-    window.scrollTo(0, 1);
-    window.addEventListener('scroll', () => {
-      let value = window.scrollY;
-      navCtx.scrollHandler(value);
+    document.getElementById('main_Y').addEventListener('scroll', e => {
+      navCtx.scrollHandler(e.currentTarget.scrollTop);
     });
-  }, []);
+  });
 
   return (
     <>
-      <div className={classes.body}>
-        <ImChangeComp hashtags={hashtags} />
+      <div id="main_Y" className={classes.main_container}>
+        <section>
+          <ImChangeComp hashtags={hashtags} />
+        </section>
+        <section>
+          <DayCounter />
+        </section>
       </div>
     </>
   );

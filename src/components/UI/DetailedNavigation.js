@@ -17,17 +17,17 @@ const DetailedNavigation = () => {
         >
           <FaArrowLeft />
           <li>
-            <Link to="/">메인페이지</Link>
+            <Link to="/main">Hello</Link>
           </li>
           <li>
-            <Link to="/signup">회원가입</Link>
+            <Link to="/">I'm</Link>
           </li>
           <li>
-            <Link to="/login">로그인</Link>
+            <Link to="/login">I'do</Link>
           </li>
 
           <li>
-            <Link to="/">문의하기</Link>
+            <Link to="/">I'dream</Link>
           </li>
         </div>
       )}

@@ -1,9 +1,10 @@
-.body {
+.main_container {
+  height: 100vh;
   width: 100%;
-  height: 200vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  section {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
 }

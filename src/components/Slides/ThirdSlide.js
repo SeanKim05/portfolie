@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavContext from '../../context/nav-context';
-import NavButton from '../NavButton';
+import NavButton from '../UI/NavButton';
 import classes from './ThirdSlide.module.scss';
 
 const ThirdSlide = props => {
