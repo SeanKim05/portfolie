@@ -16,6 +16,7 @@
       font-size: 3rem;
       font-weight: 600;
       line-height: 1.5;
+      margin-bottom: 1rem;
     }
     p {
       font-size: 2rem;
@@ -39,18 +40,18 @@
     .spoiler {
       padding: 0.5rem;
       text-align: center;
-      color: transparent;
-      background-position: right;
-      background-size: 100%;
-      border: 2px solid grey;
-      // background-image: linear-gradient(#353435, #353435);
+      background-color: black;
+      border: 2px solid gray;
       display: inline;
-      background-repeat: no-repeat;
-      transition: all 500ms ease-in-out;
+      animation: fade_in 8s;
     }
-    .spoiler:hover {
-      color: rgb(255, 255, 255);
-      // background-size: 0%;
+  }
+  @keyframes fade_in {
+    from {
+      color: black;
+    }
+    to {
+      color: white;
     }
   }
 }

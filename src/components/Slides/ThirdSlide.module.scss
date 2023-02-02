@@ -22,7 +22,6 @@
     }
     h2 {
       width: 100%;
-      position: absolute;
       font-size: 2.5rem;
       font-weight: 600;
       line-height: 1.5;
@@ -39,6 +38,7 @@
   }
   .animation_sliding {
     animation: left_slide 2s;
+    position: absolute;
   }
   @keyframes left_slide {
     from {

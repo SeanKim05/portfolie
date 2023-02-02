@@ -1,6 +1,5 @@
 import classes from './FirstSlide.module.scss';
 import Video from '../../assets/videos/Mountain.mp4';
-import NavButton from '../UI/NavButton';
 
 const FirstSlide = props => {
   return (

@@ -4,7 +4,7 @@ import my_img from '../../assets/images/my_img.jpg';
 import { Link } from 'react-router-dom';
 
 function ImChangeComp({ hashtags }) {
-  const [newName, setnewName] = useState('');
+  const [newName, setnewName] = useState('김유현');
 
   const shuffle = useCallback(() => {
     const index = Math.floor(Math.random() * hashtags.length);

@@ -8,26 +8,21 @@ import { FaBars, FaGithub } from 'react-icons/fa';
 import { SiNotion } from 'react-icons/si';
 
 function Navigation() {
-  const navCtx = useContext(NavContext);
+  const { clicked, navClickedHandler, yScrollVal } = useContext(NavContext);
 
   return (
     <>
-      {navCtx.clicked ? (
-        <>
-          <DetailedNavigation />
-        </>
+      {clicked ? (
+        <DetailedNavigation />
       ) : (
         <nav className={classes.nav_container}>
           <div className={classes.default_nav_wrapper}>
             <div className={classes.menu_icon}>
-              <FaBars
-                alt="menu_bar"
-                onClick={() => navCtx.navClickedHandler(true)}
-              />
+              <FaBars alt="menu_bar" onClick={() => navClickedHandler(true)} />
             </div>
 
             <img
-              style={{ opacity: 60 / navCtx.yScrollVal }}
+              style={{ opacity: 60 / yScrollVal }}
               src={logo}
               alt="메인로고"
             />
