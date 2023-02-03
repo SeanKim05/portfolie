@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Card from '../UI/Card';
+import Carousel from './Carousel';
 import classes from './DayCounter.module.scss';
 
 const DayCounter = () => {
@@ -26,7 +27,9 @@ const DayCounter = () => {
 
       <section className={classes.work_elem_wrapper}>
         <h1 className={classes.work_elem_title}>프로젝트와 기업과제</h1>
-        <div className={classes.card_block}></div>
+        <div className={classes.card_block}>
+          <Carousel />
+        </div>
       </section>
     </div>
   );

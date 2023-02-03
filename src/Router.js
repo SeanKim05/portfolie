@@ -4,6 +4,7 @@ import Slide from './pages/Slide/Slide';
 import Main from './pages/Main/Main';
 import Navigation from './components/UI/Navigation';
 import HashTag from './components/HashTagDetail/HashTag';
+import Carousel from './components/Main/Carousel';
 
 const Router = () => {
   return (
@@ -13,6 +14,7 @@ const Router = () => {
         <Route path="/" element={<Slide />} />
         <Route path="/main" element={<Main />} />
         <Route path="/hash_detail/:tag_id" element={<HashTag />} />
+        <Route path="/test" element={<Carousel />} />
       </Routes>
     </BrowserRouter>
   );
