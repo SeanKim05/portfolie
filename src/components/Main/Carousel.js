@@ -8,21 +8,54 @@ const Carousel = () => {
         <div className={classes.slide_track}>
           <div className={classes.slide}>
             <img src={carousel_img} />
+            <p>1</p>
           </div>
           <div className={classes.slide}>
             <img src={carousel_img} />
+            <p>2</p>
           </div>
           <div className={classes.slide}>
             <img src={carousel_img} />
+            <p>3</p>
           </div>
           <div className={classes.slide}>
             <img src={carousel_img} />
+            <p>4</p>
           </div>
           <div className={classes.slide}>
             <img src={carousel_img} />
+            <p>5</p>
           </div>
           <div className={classes.slide}>
             <img src={carousel_img} />
+            <p>6</p>
+          </div>
+
+          {/* double */}
+
+          <div className={classes.slide}>
+            <img src={carousel_img} />
+            <p>1</p>
+          </div>
+          <div className={classes.slide}>
+            <img src={carousel_img} />
+            <p>2</p>
+          </div>
+          <div className={classes.slide}>
+            <img src={carousel_img} />
+            <p>3</p>
+          </div>
+          <div className={classes.slide}>
+            <img src={carousel_img} />
+            <p>4</p>
+          </div>
+          <div className={classes.slide}>
+            <img src={carousel_img} />
+            <p>5</p>
+          </div>
+          <div className={classes.slide}>
+            <img src={carousel_img} />
+            <p>6</p>
           </div>
         </div>
       </div>
