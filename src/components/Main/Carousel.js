@@ -1,62 +1,33 @@
 import React from 'react';
-import carousel_img from '../../assets/images/project_roecy.png';
 import classes from './Carousel.module.scss';
+
+const MockImg = [
+  { id: 0, url: require('../../assets/images/project_sajo.png') },
+  { id: 1, url: require('../../assets/images/project_roecy.png') },
+  { id: 2, url: require('../../assets/images/project_haii.png') },
+  { id: 3, url: require('../../assets/images/project_bodit.png') },
+  { id: 4, url: require('../../assets/images/project_winningi.png') },
+  { id: 5, url: require('../../assets/images/project_roecy.png') },
+];
+
 const Carousel = () => {
   return (
     <section>
       <div className={classes.slider}>
         <div className={classes.slide_track}>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>1</p>
-          </div>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>2</p>
-          </div>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>3</p>
-          </div>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>4</p>
-          </div>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>5</p>
-          </div>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>6</p>
-          </div>
-
+          {MockImg.map(img => (
+            <div className={classes.slide}>
+              <img src={img.url} />
+              <p>{img.id}</p>
+            </div>
+          ))}
           {/* double */}
-
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>1</p>
-          </div>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>2</p>
-          </div>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>3</p>
-          </div>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>4</p>
-          </div>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>5</p>
-          </div>
-          <div className={classes.slide}>
-            <img src={carousel_img} />
-            <p>6</p>
-          </div>
+          {MockImg.map(img => (
+            <div className={classes.slide}>
+              <img src={img.url} />
+              <p>{img.id}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
