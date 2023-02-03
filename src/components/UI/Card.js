@@ -3,8 +3,6 @@ import classes from './Card.module.scss';
 import project_img from '../../assets/images/project_roecy.png';
 
 const Card = () => {
-  const [scrollReached, setScrollReached] = useState('');
-
   return (
     <div className={classes.card_wrapper}>
       <img src={project_img} alt="프로젝트 로이시" />

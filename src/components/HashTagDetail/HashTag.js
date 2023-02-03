@@ -14,7 +14,11 @@ const HashTag = () => {
         <figure className={classes.img_block}>
           <img src={hash_img} />
           <figcaption>
-            <h1>#저는&nbsp;{hashtagData[tag_id].tag}입니다.</h1>
+            <h1>
+              #저는&nbsp;
+              <span>{hashtagData[tag_id].tag}</span>
+              입니다.
+            </h1>
             <p>{hashtagData[tag_id].text}</p>
           </figcaption>
         </figure>

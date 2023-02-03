@@ -4,8 +4,6 @@ import classes from './DayCounter.module.scss';
 
 const DayCounter = () => {
   const [startDate, setStartDate] = useState('');
-  const [isStopped, setIsStopped] = useState(false);
-  const scrollContainerRef = useRef(null);
 
   useEffect(() => {
     let d1 = new Date('August 1, 2022');
@@ -16,14 +14,6 @@ const DayCounter = () => {
     let dateToString = timeToDate.toString();
     setStartDate(dateToString);
   }, []);
-
-  const handleMouseEnter = () => {
-    setIsStopped(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsStopped(false);
-  };
 
   return (
     <div className={classes.container}>
@@ -36,31 +26,7 @@ const DayCounter = () => {
 
       <section className={classes.work_elem_wrapper}>
         <h1 className={classes.work_elem_title}>프로젝트와 기업과제</h1>
-        <div
-          className={classes.card_block}
-          ref={scrollContainerRef}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <li className={classes.card_elem}>
-            <Card />
-          </li>
-          <li className={classes.card_elem}>
-            <Card />
-          </li>
-          <li className={classes.card_elem}>
-            <Card />
-          </li>
-          <li className={classes.card_elem}>
-            <Card />
-          </li>
-          <li className={classes.card_elem}>
-            <Card />
-          </li>
-          <li className={classes.card_elem}>
-            <Card />
-          </li>
-        </div>
+        <div className={classes.card_block}></div>
       </section>
     </div>
   );

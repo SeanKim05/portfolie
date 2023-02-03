@@ -50,16 +50,24 @@
       text-underline-offset: 0.5rem;
       line-height: 1.2;
     }
+    h1:hover {
+      color: white;
+      background-color: black;
+      cursor: pointer;
+    }
   }
   .hash_tag_block {
     display: flex;
     font-size: 1.2rem;
     font-style: italic;
     a {
-      text-decoration: none;
-      color: inherit;
       margin-right: 0.5rem;
       cursor: pointer;
+    }
+    a:hover {
+      color: black;
+      opacity: 0.5;
+      text-decoration: underline;
     }
   }
 
