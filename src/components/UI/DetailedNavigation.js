@@ -17,17 +17,19 @@ const DetailedNavigation = () => {
         >
           <FaArrowLeft />
           <li>
-            <Link to="/main">Hello</Link>
+            <Link to="/">Hello</Link>
           </li>
           <li>
-            <Link to="/">I'm</Link>
+            <Link to="/main">I'm</Link>
           </li>
           <li>
-            <Link to="/login">I'do</Link>
+            <Link to="/">Yu Hyun</Link>
           </li>
-
           <li>
-            <Link to="/">I'dream</Link>
+            <Link to="/">I do</Link>
+          </li>
+          <li>
+            <Link to="/">I dream</Link>
           </li>
         </div>
       )}

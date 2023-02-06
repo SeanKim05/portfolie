@@ -1,6 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
 import classes from './ImChangeComp.module.scss';
-import my_img from '../../assets/images/my_img.jpg';
 import { Link, useNavigate } from 'react-router-dom';
 
 function ImChangeComp({ hashtags }) {

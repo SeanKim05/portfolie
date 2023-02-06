@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Slide from './pages/Slide/Slide';
 import Main from './pages/Main/Main';
 import Navigation from './components/UI/Navigation';
-import HashTag from './components/HashTagDetail/HashTag';
+import HashTag from './components/MyName/HashTag';
 import Carousel from './components/Main/Carousel';
 
 const Router = () => {

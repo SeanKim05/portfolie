@@ -1,5 +1,5 @@
 .container {
-  width: 100%;
+  // width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -34,6 +34,7 @@
   }
   .work_elem_wrapper {
     display: flex;
+    width: 100%;
     flex-direction: column;
     .work_elem_title {
       font-size: 2rem;
@@ -44,6 +45,6 @@
 
   .carousel_block {
     background-color: black;
-    width: 95%;
+    width: 100%;
   }
 }
