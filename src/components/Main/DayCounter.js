@@ -1,7 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react';
-import Card from '../UI/Card';
 import Carousel from './Carousel';
 import classes from './DayCounter.module.scss';
+import {
+  SiJavascript,
+  SiCss3,
+  SiHtml5,
+  SiReact,
+  SiSass,
+  SiGit,
+} from 'react-icons/si';
 
 const DayCounter = () => {
   const [startDate, setStartDate] = useState('');
@@ -22,10 +29,22 @@ const DayCounter = () => {
         시작으로 부터
         <span className={classes.clock_elem}>{startDate[0]}</span>
         <span className={classes.clock_elem}>{startDate[1]}</span>
-        <span className={classes.clock_elem}>{startDate[2]}</span>일
+        <span className={classes.clock_elem}>{startDate[2]}</span>
+        <span>일</span>
       </section>
 
       <section className={classes.work_elem_wrapper}>
+        <div className={classes.work_elem_icons_block}>
+          <p>다양한 기술스택으로 빌드 된</p>
+          <div>
+            <SiHtml5 color="rgb(255, 87, 51)" />
+            <SiCss3 color="rgb(38, 77, 228)" />
+            <SiJavascript color="rgb(240, 219, 79" />
+            <SiReact color="rgb(74, 216, 255)" />
+            <SiSass color="rgb(204, 102, 153)" />
+            <SiGit color="rgb(243, 79, 41)" />
+          </div>
+        </div>
         <h1 className={classes.work_elem_title}>프로젝트와 기업과제</h1>
         <div className={classes.carousel_block}>
           <Carousel />

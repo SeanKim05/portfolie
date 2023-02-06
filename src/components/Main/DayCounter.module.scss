@@ -8,7 +8,7 @@
   font-size: 1.5rem;
   padding: 1rem;
   .clock_wrapper {
-    height: 40%;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -36,10 +36,20 @@
     display: flex;
     width: 100%;
     flex-direction: column;
+    .work_elem_icons_block {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 1.8rem;
+      svg {
+        margin: 1rem 0.2rem;
+        height: 4rem;
+        width: 4rem;
+      }
+    }
     .work_elem_title {
-      font-size: 2rem;
+      font-size: 3rem;
       font-weight: 700;
-      margin: 1.5rem 0rem;
+      margin-bottom: 4rem;
     }
   }
 
