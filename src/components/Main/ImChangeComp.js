@@ -18,7 +18,7 @@ function ImChangeComp({ hashtags }) {
   }, [shuffle]);
 
   return (
-    <div className={classes.container}>
+    <div className={classes.im_change_comp_container}>
       <section className={classes.contents_wrapper}>
         <h1>안녕하세요 김유현입니다.</h1>
         <div className={classes.changing_text_block}>
@@ -40,7 +40,7 @@ function ImChangeComp({ hashtags }) {
           <br />
           결국 시작과 노력이 있었기 때문에 얻을 수 있었던 타이틀입니다.
           <br />
-          이번에는 개발자라는 타이틀을 얻고자 노력하고 있습니다.
+          이번에는 개발자라는 타이틀을 얻기 위해 발걸음을 옮기는 중입니다.
         </p>
       </section>
     </div>

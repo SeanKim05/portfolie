@@ -1,7 +1,6 @@
-section {
-  display: grid;
-  place-items: center;
+.carousel_container {
   overflow: hidden;
+  background-color: none;
 }
 
 .slider {
@@ -52,7 +51,6 @@ img:hover {
   top: 50%;
   width: 100%;
   text-align: center;
-  background: none;
   opacity: inherit;
   color: whitesmoke;
   visibility: hidden;
