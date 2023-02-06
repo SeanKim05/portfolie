@@ -6,7 +6,6 @@ const NavContext = React.createContext({
   scrollHandler: () => {},
   yScrollVal: 1,
 });
-
 export const NavContextProvider = props => {
   const [clicked, setClicked] = useState(false);
   const [yScrollVal, setYScrollVal] = useState(1);

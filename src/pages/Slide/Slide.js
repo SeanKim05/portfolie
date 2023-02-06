@@ -43,13 +43,13 @@ function Mainpage() {
 
   return (
     <div className={classes.main_container} id="main_slideY">
-      <section>
+      <section className={classes.slide_main_scroll_section}>
         <FirstSlide title={slideData[0].title} text={slideData[0].text} />
       </section>
-      <section>
+      <section className={classes.slide_main_scroll_section}>
         <SecondSlide title={slideData[1].title} text={slideData[1].text} />
       </section>
-      <section>
+      <section className={classes.slide_main_scroll_section}>
         <ThirdSlide title={slideData[2].title} text={slideData[2].text} />
       </section>
     </div>

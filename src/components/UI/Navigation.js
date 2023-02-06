@@ -20,9 +20,8 @@ function Navigation() {
             <div className={classes.menu_icon}>
               <FaBars alt="menu_bar" onClick={() => navClickedHandler(true)} />
             </div>
-
             <img
-              style={{ opacity: 60 / yScrollVal }}
+              style={{ opacity: 1 / yScrollVal }}
               src={logo}
               alt="메인로고"
             />

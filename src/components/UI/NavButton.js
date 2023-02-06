@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './NavButton.module.scss';
 
-const NavButton = props => {
+const NavButton = ({ event, title }) => {
   return (
     <div>
-      <button className={classes.nav_button} onClick={props.event}>
-        <span>{props.title} </span>
+      <button className={classes.nav_button} onClick={event}>
+        <span>{title}</span>
       </button>
     </div>
   );

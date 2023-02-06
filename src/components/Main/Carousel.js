@@ -47,7 +47,7 @@ const Carousel = () => {
         <div className={classes.slide_track}>
           {MockImg.map(img => (
             <div className={classes.slide} key={img.id}>
-              <div className={classes.slie_img_wrapper}>
+              <div className={classes.slide_img_wrapper}>
                 <img
                   className={classes.slide_img}
                   src={img.url}
@@ -62,7 +62,7 @@ const Carousel = () => {
           {/* double */}
           {MockImg.map(img => (
             <div className={classes.slide} key={img.id}>
-              <div className={classes.slie_img_wrapper}>
+              <div className={classes.slide_img_wrapper}>
                 <img
                   className={classes.slide_img}
                   src={img.url}

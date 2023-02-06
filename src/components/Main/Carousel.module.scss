@@ -1,16 +1,13 @@
 .carousel_container {
   overflow: hidden;
-  background-color: none;
-}
-
-.slider {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .slide_track {
   display: flex;
-  align-items: center;
-  width: calc(50rem * 12);
+  width: 800rem;
   animation: scroll 20s linear infinite;
 }
 
@@ -24,7 +21,7 @@
   }
 
   100% {
-    transform: translateX(calc(-50 * 6rem));
+    transform: translateX(312rem);
   }
 }
 
@@ -38,12 +35,6 @@
 
 img {
   max-width: 100%;
-  max-height: 100%;
-  opacity: 0.9;
-}
-
-img:hover {
-  opacity: 0.5;
 }
 
 .slide_img_detail {
@@ -55,10 +46,15 @@ img:hover {
   color: whitesmoke;
   visibility: hidden;
   font-size: 2rem;
+  font-weight: 700;
   opacity: 0;
 }
-.slie_img_wrapper:hover .slide_img_detail {
+.slide_img_wrapper:hover .slide_img_detail {
   cursor: pointer;
   visibility: visible;
   opacity: 1;
+}
+
+.slide_img_wrapper:hover .slide_img {
+  opacity: 0.7;
 }

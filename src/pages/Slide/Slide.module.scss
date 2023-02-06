@@ -3,8 +3,8 @@
   width: 100%;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-}
-section {
-  height: 100vh;
-  scroll-snap-align: start;
+  .slide_main_scroll_section {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
 }

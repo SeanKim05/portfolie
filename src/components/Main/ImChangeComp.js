@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import classes from './ImChangeComp.module.scss';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import NavButton from '../UI/NavButton';
 
 function ImChangeComp({ hashtags }) {
   const [newName, setnewName] = useState('김유현');
@@ -19,29 +20,32 @@ function ImChangeComp({ hashtags }) {
 
   return (
     <div className={classes.im_change_comp_container}>
-      <section className={classes.contents_wrapper}>
-        <h1>안녕하세요 김유현입니다.</h1>
-        <div className={classes.changing_text_block}>
-          저는&nbsp;
-          <h1 className={classes.im_text}>
-            <Link to={`/hash_detail/${index}`}>{newName}</Link>
-          </h1>
-          &nbsp;입니다.
+      <section className={classes.contents_box}>
+        <div className={classes.contents_wrapper}>
+          <h1>안녕하세요 김유현입니다.</h1>
+          <div className={classes.changing_text_block}>
+            저는&nbsp;
+            <h1 className={classes.im_text}>
+              <Link to={`/hash_detail/${index}`}>{newName}</Link>
+            </h1>
+            &nbsp;입니다.
+          </div>
+          <div className={classes.hash_tag_block}>
+            {hashtags.map(tags => (
+              <ul key={tags.id}>
+                <Link to={`/hash_detail/${tags.id}`}>#{tags.tag}</Link>
+              </ul>
+            ))}
+          </div>
+          <p className={classes.introduce_text}>
+            위 타이틀 저절로 타이틀은 없었습니다.
+            <br />
+            결국 시작과 노력이 있었기 때문에 얻을 수 있었던 타이틀입니다.
+            <br />
+            이번에는 개발자라는 타이틀을 얻기 위해 발걸음을 옮기는 중입니다.
+          </p>
+          <NavButton title="알아보기" />
         </div>
-        <div className={classes.hash_tag_block}>
-          {hashtags.map(tags => (
-            <ul key={tags.id}>
-              <Link to={`/hash_detail/${tags.id}`}>#{tags.tag}</Link>
-            </ul>
-          ))}
-        </div>
-        <p className={classes.introduce_text}>
-          위 타이틀 저절로 타이틀은 없었습니다.
-          <br />
-          결국 시작과 노력이 있었기 때문에 얻을 수 있었던 타이틀입니다.
-          <br />
-          이번에는 개발자라는 타이틀을 얻기 위해 발걸음을 옮기는 중입니다.
-        </p>
       </section>
     </div>
   );
