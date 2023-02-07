@@ -1,0 +1,27 @@
+.card_box {
+  width: 25rem;
+  height: 25rem;
+  background-color: #212021;
+  border-radius: 0.5rem;
+  .card_img_wrapper {
+    height: 55%;
+    img {
+      border-radius: 0.5rem;
+      height: 100%;
+    }
+  }
+  .card_text_wrapper {
+    height: 45%;
+    padding: 0.5rem;
+    opacity: 0.8;
+    h1 {
+      border-bottom: 1px solid white;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    p {
+      padding: 0.5rem;
+    }
+  }
+}

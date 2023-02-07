@@ -7,32 +7,13 @@
   background-image: url('../../assets/images/my_img.jpg');
   background-size: cover;
 }
-.img_wrapper {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .img_block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-    height: 60%;
-    background-color: white;
-    img {
-      height: 100%;
-      width: 100%;
-    }
-  }
-}
 .contents_box {
   .contents_wrapper {
-    width: 45%;
+    width: 30rem;
     background-color: rgb(0, 0, 0, 0.1);
     border-radius: 1rem;
     padding: 2rem;
   }
-  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;

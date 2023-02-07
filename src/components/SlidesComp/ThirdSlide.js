@@ -13,7 +13,7 @@ const ThirdSlide = props => {
   };
   const navCtx = useContext(NavContext);
   useEffect(() => {
-    if (navCtx.yScrollVal >= 2000) {
+    if (navCtx.yScrollVal > 1000) {
       setScrollReached(true);
     }
   });
