@@ -9,12 +9,13 @@ import IDream from '../../components/MainComp/IDream';
 const hashtags = MOCK_DATA.hashtags;
 
 const Main = () => {
-  const navCtx = useContext(NavContext);
+  const { scrollHandler } = useContext(NavContext);
+  scrollHandler(1);
   useEffect(() => {
     document.getElementById('main_Y').addEventListener('scroll', e => {
-      navCtx.scrollHandler(e.currentTarget.scrollTop);
+      scrollHandler(e.currentTarget.scrollTop);
     });
-  });
+  }, [scrollHandler]);
 
   return (
     <>

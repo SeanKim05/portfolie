@@ -7,20 +7,21 @@ import HashTag from './components/MyName/HashTag';
 import IDo from './pages/IDo/IDo';
 import Overlay from './components/UI/Layout/Overlay';
 import NavContext from './context/nav-context';
+import Test from './Test/Test';
 
 const Router = () => {
-  const navCtx = useContext(NavContext);
+  const { clicked } = useContext(NavContext);
 
   return (
     <BrowserRouter>
-      {navCtx.clicked ? <Overlay /> : ''}
+      {clicked ? <Overlay /> : ''}
       <Navigation />
       <Routes>
         <Route path="/" element={<Slide />} />
         <Route path="/main" element={<Main />} />
         <Route path="/hash_detail/:tag_id" element={<HashTag />} />
         <Route path="/IDo" element={<IDo />} />
-        {/* <Route path="/test" element={<Carousel />} /> */}
+        <Route path="/test" element={<Test />} />
       </Routes>
     </BrowserRouter>
   );
