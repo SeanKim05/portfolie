@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from './Carousel';
 import NavButton from '../UI/NavButton';
-import classes from './IDoWork.module.scss';
+import classes from './WorkCarousel.module.scss';
 import {
   SiJavascript,
   SiCss3,
@@ -22,7 +22,7 @@ const IDoWork = () => {
             <DayCounter />일
           </div>
           <div className={classes.icons_block}>
-            <p>정상을 향한 한 걸음 한 걸음 필수 기술스택을 적용한</p>
+            <p>웹 프론트엔드 필수 기술스택을 적용한</p>
             <div>
               <SiHtml5 color="rgb(255, 87, 51)" />
               <SiCss3 color="rgb(38, 77, 228)" />

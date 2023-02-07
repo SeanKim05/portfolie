@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import classes from './Navigation.module.scss';
 
-import NavContext from '../../context/nav-context';
+import NavContext from '../../../context/nav-context';
 import DetailedNavigation from './DetailedNavigation';
-import logo from '../../assets/images/logo_transparent.png';
+import logo from '../../../assets/images/logo_transparent.png';
 import { FaBars, FaGithub } from 'react-icons/fa';
 import { SiNotion } from 'react-icons/si';
 

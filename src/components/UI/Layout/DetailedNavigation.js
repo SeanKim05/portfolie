@@ -2,11 +2,10 @@ import React, { useContext, useState } from 'react';
 import classes from './DetailedNavigation.module.scss';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import NavContext from '../../context/nav-context';
+import NavContext from '../../../context/nav-context';
 
 const DetailedNavigation = () => {
   const overlayCtx = useContext(NavContext);
-  console.log(overlayCtx.clicked);
 
   return (
     <>
@@ -26,10 +25,10 @@ const DetailedNavigation = () => {
             <Link to="/">Yu Hyun</Link>
           </li>
           <li>
-            <Link to="/">I do</Link>
+            <Link to="/Ido">I do</Link>
           </li>
           <li>
-            <Link to="/">I dream</Link>
+            <Link to="/IDream">I dream</Link>
           </li>
         </div>
       )}

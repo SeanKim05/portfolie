@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
-import FirstSlide from '../../components/Slides/FirstSlide';
-import SecondSlide from '../../components/Slides/SecondSlide';
-import ThirdSlide from '../../components/Slides/ThirdSlide';
+import FirstSlide from '../../components/SlidesComp/FirstSlide';
+import SecondSlide from '../../components/SlidesComp/SecondSlide';
+import ThirdSlide from '../../components/SlidesComp/ThirdSlide';
 import NavContext from '../../context/nav-context';
 import classes from './Slide.module.scss';
 

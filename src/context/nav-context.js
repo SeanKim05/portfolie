@@ -25,8 +25,6 @@ export const NavContextProvider = props => {
     scrollHandler,
   };
 
-  console.log(yScrollVal);
-
   return (
     <NavContext.Provider value={contextValue}>
       {props.children}

@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import classes from './Main.module.scss';
 import NavContext from '../../context/nav-context';
-import ImChangeComp from '../../components/Main/ImChangeComp';
-import IDoWork from '../../components/Main/IDoWork';
+import ImChangeComp from '../../components/MainComp/ImChangeComp';
+import WorkCarousel from '../../components/MainComp/WorkCarousel';
 import MOCK_DATA from '../../data/mock.json';
-import IDream from '../../components/Main/IDream';
+import IDream from '../../components/MainComp/IDream';
 
 const hashtags = MOCK_DATA.hashtags;
 
@@ -23,7 +23,7 @@ const Main = () => {
           <ImChangeComp hashtags={hashtags} />
         </section>
         <section className={classes.main_scroll_section}>
-          <IDoWork />
+          <WorkCarousel />
         </section>
         <section className={classes.main_scroll_section}>
           <IDream />
