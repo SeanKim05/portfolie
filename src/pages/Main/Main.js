@@ -10,12 +10,13 @@ const hashtags = MOCK_DATA.hashtags;
 
 const Main = () => {
   const { scrollHandler } = useContext(NavContext);
-  scrollHandler(1);
+
   useEffect(() => {
+    scrollHandler(1);
     document.getElementById('main_Y').addEventListener('scroll', e => {
       scrollHandler(e.currentTarget.scrollTop);
     });
-  }, [scrollHandler]);
+  }, []);
 
   return (
     <>

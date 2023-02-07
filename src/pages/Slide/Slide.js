@@ -33,13 +33,14 @@ const slideData = [
 ];
 
 function Mainpage() {
-  const navCtx = useContext(NavContext);
+  const { yScrollVal, scrollHandler } = useContext(NavContext);
 
   useEffect(() => {
+    scrollHandler(1);
     document.getElementById('main_slideY').addEventListener('scroll', e => {
-      navCtx.scrollHandler(e.currentTarget.scrollTop);
+      scrollHandler(e.currentTarget.scrollTop);
     });
-  });
+  }, []);
 
   return (
     <div className={classes.main_container} id="main_slideY">

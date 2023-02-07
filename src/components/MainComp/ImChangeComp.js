@@ -22,6 +22,7 @@ function ImChangeComp({ hashtags }) {
     <div className={classes.im_change_comp_container}>
       <section className={classes.contents_box}>
         <div className={classes.contents_wrapper}>
+          <p>시작의 가치를 믿습니다.</p>
           <h1>안녕하세요 김유현입니다.</h1>
           <div className={classes.changing_text_block}>
             저는&nbsp;
