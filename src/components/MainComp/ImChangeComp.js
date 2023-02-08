@@ -3,15 +3,15 @@ import classes from './ImChangeComp.module.scss';
 import { Link } from 'react-router-dom';
 import NavButton from '../UI/NavButton';
 
-function ImChangeComp({ hashtags }) {
+function ImChangeComp({ personal_info_data }) {
   const [newName, setnewName] = useState('김유현');
   const [index, setIndex] = useState('');
 
   const shuffle = useCallback(() => {
-    const index = Math.floor(Math.random() * hashtags.length);
-    setIndex(hashtags[index].id);
-    setnewName(hashtags[index].tag);
-  }, [hashtags]);
+    const index = Math.floor(Math.random() * personal_info_data.length);
+    setIndex(personal_info_data[index].id);
+    setnewName(personal_info_data[index].title);
+  }, [personal_info_data]);
 
   useEffect(() => {
     const intervalID = setInterval(shuffle, 1000);
@@ -32,9 +32,9 @@ function ImChangeComp({ hashtags }) {
             &nbsp;입니다.
           </div>
           <div className={classes.hash_tag_block}>
-            {hashtags.map(tags => (
+            {personal_info_data.map(tags => (
               <ul key={tags.id}>
-                <Link to={`/hash_detail/${tags.id}`}>#{tags.tag}</Link>
+                <Link to={`/hash_detail/${tags.id}`}>#{tags.title}</Link>
               </ul>
             ))}
           </div>

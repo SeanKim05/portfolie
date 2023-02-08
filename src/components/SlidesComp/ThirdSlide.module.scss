@@ -37,12 +37,12 @@
     }
   }
   .animation_sliding {
-    animation: left_slide 2s;
+    animation: left_slide 5s;
     position: absolute;
   }
   @keyframes left_slide {
     from {
-      left: -10rem;
+      left: -20rem;
       opacity: 0;
     }
     to {

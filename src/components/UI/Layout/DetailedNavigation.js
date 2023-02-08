@@ -22,7 +22,7 @@ const DetailedNavigation = () => {
             <Link to="/main">I'm</Link>
           </li>
           <li>
-            <Link to="/">Yu Hyun</Link>
+            <Link to="/myName">Yu Hyun</Link>
           </li>
           <li>
             <Link to="/Ido">I do</Link>
