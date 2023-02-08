@@ -1,23 +1,35 @@
 import React, { useContext, useEffect } from 'react';
 import classes from './Main.module.scss';
 import NavContext from '../../context/nav-context';
-import FirstSlide from '../../components/Slides/FirstSlide';
-import ImChangeComp from '../../components/Main/ImChangeComp';
+import ImChangeComp from '../../components/MainComp/ImChangeComp';
+import WorkCarousel from '../../components/MainComp/WorkCarousel';
+import MOCK_DATA from '../../data/mock.json';
+import IDream from '../../components/MainComp/IDream';
+
+const hashtags = MOCK_DATA.hashtags;
 
 const Main = () => {
-  const navCtx = useContext(NavContext);
+  const { scrollHandler } = useContext(NavContext);
+
   useEffect(() => {
-    window.scrollTo(0, 1);
-    window.addEventListener('scroll', () => {
-      let value = window.scrollY;
-      navCtx.scrollHandler(value);
+    scrollHandler(1);
+    document.getElementById('main_Y').addEventListener('scroll', e => {
+      scrollHandler(e.currentTarget.scrollTop);
     });
   }, []);
 
   return (
     <>
-      <div className={classes.body}>
-        <ImChangeComp />
+      <div id="main_Y" className={classes.main_container}>
+        <section className={classes.main_scroll_section}>
+          <ImChangeComp hashtags={hashtags} />
+        </section>
+        <section className={classes.main_scroll_section}>
+          <WorkCarousel />
+        </section>
+        <section className={classes.main_scroll_section}>
+          <IDream />
+        </section>
       </div>
     </>
   );

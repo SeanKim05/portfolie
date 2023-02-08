@@ -1,11 +1,10 @@
 .main_container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   height: 100vh;
   width: 100%;
-}
-
-section {
-  height: 100vh;
-  scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  .slide_main_scroll_section {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
 }

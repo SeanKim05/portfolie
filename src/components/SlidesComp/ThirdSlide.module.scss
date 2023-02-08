@@ -1,0 +1,53 @@
+.main_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  color: rgb(196, 196, 196);
+  background-color: none;
+  .caption_wrapper {
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 3rem;
+    position: relative;
+    h1 {
+      margin-bottom: 3rem;
+      font-weight: 800;
+      font-size: 3.5rem;
+      text-decoration: underline overline;
+      text-underline-offset: 0.5rem;
+    }
+    h2 {
+      width: 100%;
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 1.5;
+      font-style: italic;
+      text-align: center;
+    }
+    p {
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      line-height: 120%;
+      left: -200rem;
+    }
+  }
+  .animation_sliding {
+    animation: left_slide 2s;
+    position: absolute;
+  }
+  @keyframes left_slide {
+    from {
+      left: -10rem;
+      opacity: 0;
+    }
+    to {
+      left: 0rem;
+      opacity: 1;
+    }
+  }
+}

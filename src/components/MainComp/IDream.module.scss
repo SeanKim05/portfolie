@@ -1,0 +1,15 @@
+.idream_container {
+  background-image: url('../../assets/images/hiking3.png');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .counter_block {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+  }
+  font-size: 1.2rem;
+}

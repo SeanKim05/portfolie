@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
-import FirstSlide from '../../components/Slides/FirstSlide';
-import SecondSlide from '../../components/Slides/SecondSlide';
-import ThirdSlide from '../../components/Slides/ThirdSlide';
+import FirstSlide from '../../components/SlidesComp/FirstSlide';
+import SecondSlide from '../../components/SlidesComp/SecondSlide';
+import ThirdSlide from '../../components/SlidesComp/ThirdSlide';
 import NavContext from '../../context/nav-context';
 import classes from './Slide.module.scss';
 
@@ -33,23 +33,24 @@ const slideData = [
 ];
 
 function Mainpage() {
-  const navCtx = useContext(NavContext);
+  const { yScrollVal, scrollHandler } = useContext(NavContext);
 
   useEffect(() => {
+    scrollHandler(1);
     document.getElementById('main_slideY').addEventListener('scroll', e => {
-      navCtx.scrollHandler(e.currentTarget.scrollTop);
+      scrollHandler(e.currentTarget.scrollTop);
     });
-  });
+  }, []);
 
   return (
     <div className={classes.main_container} id="main_slideY">
-      <section>
+      <section className={classes.slide_main_scroll_section}>
         <FirstSlide title={slideData[0].title} text={slideData[0].text} />
       </section>
-      <section>
+      <section className={classes.slide_main_scroll_section}>
         <SecondSlide title={slideData[1].title} text={slideData[1].text} />
       </section>
-      <section>
+      <section className={classes.slide_main_scroll_section}>
         <ThirdSlide title={slideData[2].title} text={slideData[2].text} />
       </section>
     </div>
