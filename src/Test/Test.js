@@ -3,10 +3,7 @@ import classes from './Test.module.scss';
 import NavContext from '../context/nav-context';
 import data from '../data/mock.json';
 
-console.log(typeof data.project[0].url);
-const testImg = data.project[0].url;
-
-console.log(testImg);
+const testImg = data.project[0].img_name;
 
 const TestData = [
   {
@@ -36,11 +33,11 @@ const Test = () => {
   return (
     <section className={classes.test_container}>
       <div className={classes.frame}>
-        <img src={testImg} />
-        <img src={TestData[0].url} />
-        <img src={TestData[0].url} />
-        <img src={TestData[0].url} />
-        <img src={TestData[0].url} />
+        <img src={require(`../assets/images/${testImg}`)} />
+        <img src={TestData[1].url} />
+        <img src={TestData[2].url} />
+        <img src={TestData[1].url} />
+        <img src={TestData[1].url} />
         <img src={TestData[0].url} />
         <img src={TestData[0].url} />
       </div>
