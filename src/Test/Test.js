@@ -1,9 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import classes from './Test.module.scss';
 import NavContext from '../context/nav-context';
-import img from '../assets/images/project_roecy.png';
-import img1 from '../assets/images/project_sajo.png';
-import img2 from '../assets/images/project_haii.png';
+import data from '../data/mock.json';
+
+console.log(typeof data.project[0].url);
+const testImg = data.project[0].url;
+
+console.log(testImg);
 
 const TestData = [
   {
@@ -31,19 +34,17 @@ const Test = () => {
   });
 
   return (
-    <div id="test_slideY" className={classes.test_container}>
-      {TestData.map(slide => (
-        <section
-          className={classes.slide}
-          style={{ backgroundImage: `url(${slide.url})` }}
-        >
-          <div className={classes.card_wrapper}>
-            <h1>{slide.title}</h1>
-            <p>{slide.text}</p>
-          </div>
-        </section>
-      ))}
-    </div>
+    <section className={classes.test_container}>
+      <div className={classes.frame}>
+        <img src={testImg} />
+        <img src={TestData[0].url} />
+        <img src={TestData[0].url} />
+        <img src={TestData[0].url} />
+        <img src={TestData[0].url} />
+        <img src={TestData[0].url} />
+        <img src={TestData[0].url} />
+      </div>
+    </section>
   );
 };
 

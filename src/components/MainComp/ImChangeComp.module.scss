@@ -47,8 +47,10 @@
   }
   .hash_tag_block {
     display: flex;
+    width: 80%;
     font-size: 1.3rem;
     font-style: italic;
+    flex-wrap: wrap;
     a {
       margin-right: 0.5rem;
       cursor: pointer;
