@@ -9,15 +9,14 @@
 
 .ido_container {
   height: 100vh;
-  width: 100%;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 
   .ido_slide {
     @include img_slide();
     display: flex;
     align-items: center;
     justify-content: end;
-    padding: 5rem;
+    padding: 5rem 0;
     .ido_card_wrapper {
       margin-right: 10rem;
       position: sticky;

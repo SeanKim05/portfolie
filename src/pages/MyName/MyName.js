@@ -3,49 +3,41 @@ import classes from './MyName.module.scss';
 import NavContext from '../../context/nav-context';
 import data from '../../data/mock.json';
 import MOCK_DATA from '../../data/mock.json';
+import { useNavigate } from 'react-router-dom';
 
 const personal_info_data = MOCK_DATA.personal_info;
 
-const testImg = data.project[0].img_name;
-
-const TestData = [
-  {
-    title: 'Roecy',
-    text: 'Justcode 1차 프로젝트',
-    url: require('../../assets/images/project_roecy.png'),
-  },
-  {
-    title: '4조의 공방',
-    text: 'Justcode 2차 프로젝트',
-    url: require('../../assets/images/project_sajo.png'),
-  },
-  {
-    title: 'HAII',
-    text: 'HAII 기업협업 과제',
-    url: require('../../assets/images/project_haii.png'),
-  },
-];
-
 const MyName = () => {
-  const navCtx = useContext(NavContext);
+  const { scrollHandler, yScrollVal } = useContext(NavContext);
+  const navigate = useNavigate();
+  const go_detail = paramsid => {
+    navigate(`/myname_detail/${paramsid}`);
+  };
 
   useEffect(() => {
-    navCtx.scrollHandler(1);
-  });
+    scrollHandler(1);
+    window.addEventListener('scroll', () => {
+      if (document.documentElement.scrollTop > 20) {
+        scrollHandler(1000);
+      } else {
+        scrollHandler(1);
+      }
+    });
+  }, []);
+  console.log(yScrollVal);
 
   return (
-    <section className={classes.my_name_container}>
+    <section id="my_name_Y" className={classes.my_name_container}>
       <div className={classes.frame}>
         {personal_info_data.map(img => (
-          <img src={require(`../../assets/images/${img.img_name}`)} />
+          <div
+            onClick={() => {
+              go_detail(img.id);
+            }}
+          >
+            <img src={require(`../../assets/images/${img.img_name}`)}></img>
+          </div>
         ))}
-        {/* <img src={require(`../../assets/images/${testImg}`)} />
-        <img src={TestData[1].url} />
-        <img src={TestData[2].url} />
-        <img src={TestData[1].url} />
-        <img src={TestData[1].url} />
-        <img src={TestData[0].url} />
-        <img src={TestData[0].url} /> */}
       </div>
     </section>
   );

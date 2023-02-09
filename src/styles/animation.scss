@@ -10,6 +10,18 @@
   }
 }
 
+@mixin fade_out {
+  animation: fade_out 5s;
+  @keyframes fade_out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
 @mixin sliding_left {
   animation: left_slide 5s;
   @keyframes left_slide {

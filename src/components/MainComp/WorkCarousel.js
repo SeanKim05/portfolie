@@ -18,6 +18,7 @@ const IDoWork = () => {
   const go_i_do = () => {
     navigate('/iDo');
   };
+
   return (
     <div className={classes.day_counter_container}>
       <section className={classes.counter_box}>

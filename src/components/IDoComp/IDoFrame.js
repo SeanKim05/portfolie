@@ -31,11 +31,27 @@ const TestData = [
 ];
 
 const IDoFrame = () => {
-  const navCtx = useContext(NavContext);
+  const { scrollHandler, yScrollVal } = useContext(NavContext);
 
   useEffect(() => {
-    navCtx.scrollHandler(1000);
-  });
+    scrollHandler(1);
+    document.getElementById('test_slideY').addEventListener('scroll', e => {
+      scrollHandler(e.currentTarget.scrollTop);
+    });
+  }, []);
+
+  // useEffect(() => {
+  //   navCtx.scrollHandler(1000);
+  // });
+
+  useEffect(() => {
+    scrollHandler(1);
+    document.getElementById('test_slideY').addEventListener('scroll', e => {
+      scrollHandler(e.currentTarget.scrollTop);
+    });
+  }, []);
+
+  console.log(yScrollVal);
 
   return (
     <div id="test_slideY" className={classes.ido_container}>

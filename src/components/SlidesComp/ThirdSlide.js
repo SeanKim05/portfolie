@@ -5,7 +5,7 @@ import NavButton from '../UI/NavButton';
 import classes from './ThirdSlide.module.scss';
 
 const ThirdSlide = props => {
-  const [scrollReached, setScrollReached] = useState('');
+  const [scrollReached, setScrollReached] = useState(false);
 
   const navigate = useNavigate();
   const goMain = () => {
@@ -13,7 +13,7 @@ const ThirdSlide = props => {
   };
   const navCtx = useContext(NavContext);
   useEffect(() => {
-    if (navCtx.yScrollVal > 1000) {
+    if (navCtx.yScrollVal > 1500) {
       setScrollReached(true);
     }
   });
