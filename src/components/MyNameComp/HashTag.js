@@ -7,7 +7,6 @@ import MOCK_DATA from '../../data/mock.json';
 
 const HashTag = () => {
   const [fadeout, setFadeout] = useState(false);
-
   const { tag_id } = useParams();
   const personal_info_data = MOCK_DATA.personal_info;
   const navigate = useNavigate();
@@ -16,7 +15,7 @@ const HashTag = () => {
     setFadeout(true);
     setTimeout(() => {
       navigate(-1);
-    }, 3000);
+    }, 2000);
   };
 
   console.log(fadeout);
@@ -24,8 +23,8 @@ const HashTag = () => {
   return (
     <div className={`${classes.container} ${fadeout ? classes.fade_out : ''}`}>
       <article className={classes.hashtag_wrapper}>
-        <div className={classes.back_button} onClick={go_back}>
-          <BsBackspace />
+        <div className={classes.back_button}>
+          <BsBackspace onClick={go_back} />
         </div>
         <figure className={classes.img_block}>
           <img

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import classes from './MyName.module.scss';
 import NavContext from '../../context/nav-context';
 import data from '../../data/mock.json';
@@ -9,9 +9,17 @@ const personal_info_data = MOCK_DATA.personal_info;
 
 const MyName = () => {
   const { scrollHandler, yScrollVal } = useContext(NavContext);
+  const [fadeout, setFadeout] = useState(false);
   const navigate = useNavigate();
+  // const go_detail = paramsid => {
+  //   navigate(`/myname_detail/${paramsid}`);
+  // };
+
   const go_detail = paramsid => {
-    navigate(`/myname_detail/${paramsid}`);
+    setFadeout(true);
+    setTimeout(() => {
+      navigate(`/myname_detail/${paramsid}`);
+    }, 2000);
   };
 
   useEffect(() => {
@@ -27,11 +35,18 @@ const MyName = () => {
   console.log(yScrollVal);
 
   return (
-    <section id="my_name_Y" className={classes.my_name_container}>
+    <section
+      id="my_name_Y"
+      className={`${classes.my_name_container} ${
+        fadeout ? classes.fade_out : ''
+      }`}
+    >
       <div className={classes.frame}>
         {personal_info_data.map(img => (
           <div
+            className={classes.img_wrapper}
             onClick={() => {
+              setFadeout(true);
               go_detail(img.id);
             }}
           >
