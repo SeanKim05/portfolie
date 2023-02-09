@@ -15,7 +15,7 @@ const HashTag = () => {
     setFadeout(true);
     setTimeout(() => {
       navigate(-1);
-    }, 2000);
+    }, 900);
   };
 
   console.log(fadeout);

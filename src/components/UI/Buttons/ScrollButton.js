@@ -1,7 +1,7 @@
-import React, { useContext, useEffect } from 'react';
-import classes from './Test.module.scss';
+import React from 'react';
+import classes from './ScrollButton.module.scss';
 
-const Test = () => {
+const ScrollButton = () => {
   return (
     <section className={classes.test_container}>
       <div className={classes.frame}>
@@ -14,4 +14,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default ScrollButton;

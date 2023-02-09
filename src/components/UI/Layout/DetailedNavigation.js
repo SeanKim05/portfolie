@@ -9,9 +9,9 @@ const DetailedNavigation = () => {
   const { clicked, navClickedHandler } = useContext(NavContext);
   const nav_revert = () => {
     setFadeout(true);
-    // setTimeout(() => {
-    //   navClickedHandler(false);
-    // }, 2000);
+    setTimeout(() => {
+      navClickedHandler(false);
+    }, 2000);
   };
   console.log(fadeout);
 

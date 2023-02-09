@@ -19,7 +19,7 @@ const MyName = () => {
     setFadeout(true);
     setTimeout(() => {
       navigate(`/myname_detail/${paramsid}`);
-    }, 2000);
+    }, 900);
   };
 
   useEffect(() => {
