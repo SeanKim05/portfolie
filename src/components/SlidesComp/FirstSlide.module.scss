@@ -1,3 +1,5 @@
+@import '../../styles/animation.scss';
+
 .main_container {
   display: flex;
   justify-content: center;
@@ -43,15 +45,7 @@
       background-color: black;
       border: 2px solid gray;
       display: inline;
-      animation: fade_in 8s;
-    }
-  }
-  @keyframes fade_in {
-    from {
-      color: black;
-    }
-    to {
-      color: white;
+      @include bg_fade_in;
     }
   }
 }

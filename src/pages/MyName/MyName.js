@@ -2,6 +2,9 @@ import React, { useContext, useEffect } from 'react';
 import classes from './MyName.module.scss';
 import NavContext from '../../context/nav-context';
 import data from '../../data/mock.json';
+import MOCK_DATA from '../../data/mock.json';
+
+const personal_info_data = MOCK_DATA.personal_info;
 
 const testImg = data.project[0].img_name;
 
@@ -27,19 +30,22 @@ const MyName = () => {
   const navCtx = useContext(NavContext);
 
   useEffect(() => {
-    navCtx.scrollHandler(1000);
+    navCtx.scrollHandler(1);
   });
 
   return (
     <section className={classes.my_name_container}>
       <div className={classes.frame}>
-        <img src={require(`../../assets/images/${testImg}`)} />
+        {personal_info_data.map(img => (
+          <img src={require(`../../assets/images/${img.img_name}`)} />
+        ))}
+        {/* <img src={require(`../../assets/images/${testImg}`)} />
         <img src={TestData[1].url} />
         <img src={TestData[2].url} />
         <img src={TestData[1].url} />
         <img src={TestData[1].url} />
         <img src={TestData[0].url} />
-        <img src={TestData[0].url} />
+        <img src={TestData[0].url} /> */}
       </div>
     </section>
   );

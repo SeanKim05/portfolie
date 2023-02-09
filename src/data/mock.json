@@ -2,36 +2,36 @@
   "personal_info": [
     {
       "id": 0,
+      "title": "졸업반",
+      "img_name": "iam_school.png",
+      "text": "예전부터 영어를 좋아했고 업무의 전문성을 높히기 위해 방통대에 편입을 했습니다.\n지금은 4학년 마지막 학기를 수강중입니다."
+    },
+    { "id": 1, "title": "카투사", "img_name": "iam_katusa.jpg" },
+    {
+      "id": 2,
       "title": "예비 개발자",
       "img_name": "iam_bootcamp.jpg",
       "text": "저는 부트캠프를 수강한 예비 개발자입니다. 기본적인 프론트엔드 지식을 보유했으며 Html, Css, Javascript, React를 활용한 웹 페이지를 제작 가능합니다."
     },
     {
-      "id": 1,
-      "title": "엔지니어",
-      "img_name": "iam_bootcamp.jpg",
-      "text": "전 직장에서 엔지니어로 근무했습니다. 자동차 관련 부품 검증업무를 수행했고 국내외 다양한 협력사와 고객사 소통 경험이 있습니다."
+      "id": 3,
+      "title": "사진쟁이",
+      "img_name": "iam_pic.jpg",
+      "text": "카메라를 들면 평소에 무심코 지나치던 것들을 다시보게 됩니다. 새로운 관점에서 보는 것을 좋아합니다"
     },
     {
-      "id": 2,
-      "title": "졸업반",
-      "img_name": "iam_bootcamp.jpg",
-      "text": "예전부터 영어를 좋아했고 업무의 전문성을 높히기 위해 방통대에 편입을 했습니다.\n지금은 4학년 마지막 학기를 수강중입니다."
+      "id": 4,
+      "title": "엔지니어",
+      "img_name": "iam_company.jpg",
+      "text": "전 직장에서 엔지니어로 근무했습니다. 자동차 관련 부품 검증업무를 수행했고 국내외 다양한 협력사와 고객사 소통 경험이 있습니다."
     },
-    { "id": 3, "title": "산업기사", "img_name": "iam_drawing.jpg" },
-    { "id": 4, "title": "카투사", "img_name": "iam_katusa.jpg" },
     {
       "id": 5,
       "title": "등린이",
       "img_name": "iam_hiker.jpg",
       "text": "등산은 단순명료해서 좋습니다.\n그저 앞으로 한발자국 한발자국 가다보면 언젠가는 정상에 도착하니까요\n정상에서 바라보는 경치도 좋지만 등산은 여정이 그 여정 자체가 보상입니다.\n걷다보면 그 순간이 좋은 기억으로 남거든요"
     },
-    {
-      "id": 6,
-      "title": "사진쟁이",
-      "img_name": "iam_pic.jpg",
-      "text": "카메라를 들면 평소에 무심코 지나치던 것들을 다시보게 됩니다. 새로운 관점에서 보는 것을 좋아합니다"
-    }
+    { "id": 6, "title": "산업기사", "img_name": "iam_cert.jpg" }
   ],
   "carousel": [{ "id": 0, "url": "/" }],
   "project": [

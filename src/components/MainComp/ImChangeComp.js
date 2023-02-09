@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import classes from './ImChangeComp.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import NavButton from '../UI/NavButton';
 
 function ImChangeComp({ personal_info_data }) {
@@ -18,6 +18,11 @@ function ImChangeComp({ personal_info_data }) {
     return () => clearInterval(intervalID);
   }, [shuffle]);
 
+  const navigate = useNavigate();
+  const go_my_name = () => {
+    navigate('/myName');
+  };
+
   return (
     <div className={classes.im_change_comp_container}>
       <section className={classes.contents_box}>
@@ -27,14 +32,14 @@ function ImChangeComp({ personal_info_data }) {
           <div className={classes.changing_text_block}>
             저는&nbsp;
             <h1 className={classes.im_text}>
-              <Link to={`/hash_detail/${index}`}>{newName}</Link>
+              <Link to={`/myname_detail/${index}`}>{newName}</Link>
             </h1>
             &nbsp;입니다.
           </div>
           <div className={classes.hash_tag_block}>
             {personal_info_data.map(tags => (
               <ul key={tags.id}>
-                <Link to={`/hash_detail/${tags.id}`}>#{tags.title}</Link>
+                <Link to={`/myname_detail/${tags.id}`}>#{tags.title}</Link>
               </ul>
             ))}
           </div>
@@ -45,7 +50,7 @@ function ImChangeComp({ personal_info_data }) {
             <br />
             이번에는 개발자라는 타이틀을 얻기 위해 발걸음을 옮기는 중입니다.
           </p>
-          <NavButton title="알아보기" />
+          <NavButton title="알아보기" event={go_my_name} />
         </div>
       </section>
     </div>

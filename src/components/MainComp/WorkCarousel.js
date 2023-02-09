@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Carousel from './Carousel';
 import NavButton from '../UI/NavButton';
 import classes from './WorkCarousel.module.scss';
@@ -13,6 +14,10 @@ import {
 import DayCounter from './DayCounter';
 
 const IDoWork = () => {
+  const navigate = useNavigate();
+  const go_i_do = () => {
+    navigate('/iDo');
+  };
   return (
     <div className={classes.day_counter_container}>
       <section className={classes.counter_box}>
@@ -32,7 +37,7 @@ const IDoWork = () => {
               <SiGit color="rgb(243, 79, 41)" />
             </div>
             <h1>프로젝트와 기업과제</h1>
-            <NavButton title="구경가기" />
+            <NavButton title="구경가기" event={go_i_do} />
           </div>
         </div>
       </section>
