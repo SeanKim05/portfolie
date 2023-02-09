@@ -5,14 +5,24 @@ import { Link } from 'react-router-dom';
 import NavContext from '../../../context/nav-context';
 
 const DetailedNavigation = () => {
-  const overlayCtx = useContext(NavContext);
+  const [fadeout, setFadeout] = useState(false);
+  const { clicked, navClickedHandler } = useContext(NavContext);
+  const nav_revert = () => {
+    setFadeout(true);
+    // setTimeout(() => {
+    //   navClickedHandler(false);
+    // }, 2000);
+  };
+  console.log(fadeout);
 
   return (
     <>
-      {overlayCtx.clicked && (
+      {clicked && (
         <div
-          className={classes.detailed_nav_container}
-          onClick={() => overlayCtx.navClickedHandler(false)}
+          className={`${classes.detailed_nav_container} ${
+            fadeout ? classes.fade_out : ''
+          }`}
+          onClick={nav_revert}
         >
           <FaArrowLeft />
           <li>

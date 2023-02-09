@@ -1,3 +1,5 @@
+@import '../../../styles/animation.scss';
+
 .detailed_nav_container {
   z-index: 3;
   display: flex;
@@ -8,6 +10,7 @@
   position: fixed;
   padding: 0rem 4rem;
   background-color: black;
+  @include fade_in;
   li {
     list-style-type: none;
   }
@@ -26,8 +29,13 @@
   }
 
   svg {
+    cursor: pointer;
     color: whitesmoke;
     width: 2rem;
     height: 2rem;
   }
+}
+
+.fade_out {
+  @include fade_out;
 }

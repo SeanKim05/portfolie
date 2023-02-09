@@ -32,7 +32,6 @@ const MyName = () => {
       }
     });
   }, []);
-  console.log(yScrollVal);
 
   return (
     <section
