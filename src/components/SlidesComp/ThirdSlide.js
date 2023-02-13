@@ -11,29 +11,25 @@ const ThirdSlide = props => {
   const goMain = () => {
     navigate('main');
   };
-  const navCtx = useContext(NavContext);
+  const { yScrollVal } = useContext(NavContext);
   useEffect(() => {
-    if (navCtx.yScrollVal > 1500) {
+    if (yScrollVal > 1500) {
       setScrollReached(true);
     }
-  }, [navCtx.yScrollVal]);
+  }, [yScrollVal]);
 
   return (
     <section className={classes.main_container}>
       {scrollReached && (
-        <div className={classes.caption_wrapper}>
-          <div className={classes.animation_sliding}>
+        <>
+          <div className={classes.caption_wrapper}>
             <h1>{props.title}</h1>
-          </div>
-          <div className={classes.animation_sliding}>
             <p>{props.text[0]}</p>
-          </div>
-          <div className={classes.animation_sliding}>
             <h2>{props.text[1]}</h2>
           </div>
-        </div>
+          <NavButton title={'여정 둘러보기'} event={goMain} />
+        </>
       )}
-      <NavButton title={'여정 둘러보기'} event={goMain} />
     </section>
   );
 };

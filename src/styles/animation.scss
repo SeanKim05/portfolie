@@ -23,6 +23,7 @@
 }
 
 @mixin slow_fade_in {
+  position: absolute;
   animation: slow_fade_in 6s;
   @keyframes slow_fade_in {
     0% {
@@ -43,9 +44,11 @@
   @keyframes left_slide {
     from {
       left: -50rem;
+      opacity: 0;
     }
     to {
       left: 0rem;
+      opacity: 1;
     }
   }
 }
@@ -56,48 +59,56 @@
   @keyframes left_slide {
     from {
       left: -50rem;
+      opacity: 0;
     }
     to {
       left: 0rem;
+      opacity: 1;
     }
   }
 }
 
 @mixin sliding_left_fast {
   position: absolute;
-  animation: left_slide 2s;
+  animation: left_slide 3s;
   @keyframes left_slide {
     from {
       left: -30rem;
+      opacity: 0;
     }
     to {
       left: 0rem;
+      opacity: 1;
     }
   }
 }
 
 @mixin sliding_right {
   position: absolute;
-  animation: right_slide 2s;
+  animation: right_slide 3s;
   @keyframes right_slide {
     from {
-      left: 40rem;
+      right: -40rem;
+      opacity: 0;
     }
     to {
-      left: 3rem;
+      right: 0rem;
+      opacity: 1;
     }
   }
 }
 
 @mixin sliding_top {
   position: absolute;
-  animation: top_slide 5s;
+  animation: top_slide 2s;
   @keyframes top_slide {
     from {
-      top: 50rem;
+      bottom: 100rem;
+      opacity: 0;
     }
     to {
       bottom: 0rem;
+      opacity: 1;
     }
   }
 }

@@ -8,24 +8,23 @@ const SecondSlide = props => {
   const [scrollReached, setScrollReached] = useState(false);
 
   useEffect(() => {
-    if (yScrollVal > 500) {
+    if (yScrollVal > 700) {
       setScrollReached(true);
     }
-  });
+  }, [yScrollVal]);
+  console.log(scrollReached);
 
   return (
     <section className={classes.main_container}>
       <figure className={classes.slide_figure}>
         <img className={classes.img_wrapper} src={caption_img} alt="등산" />
-        <figcaption className={classes.caption_wrapper}>
-          {scrollReached && (
-            <>
-              <h2>{props.text[0]}</h2>
-              <h1>{props.title}</h1>
-              <p>{props.text[1]}</p>
-            </>
-          )}
-        </figcaption>
+        {scrollReached && (
+          <figcaption className={classes.caption_wrapper}>
+            <h2>{props.text[0]}</h2>
+            <h1>{props.title}</h1>
+            <p>{props.text[1]}</p>
+          </figcaption>
+        )}
       </figure>
     </section>
   );
