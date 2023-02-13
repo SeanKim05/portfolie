@@ -13,16 +13,18 @@ const SecondSlide = props => {
     }
   });
 
-  console.log(yScrollVal);
-
   return (
     <section className={classes.main_container}>
       <figure className={classes.slide_figure}>
         <img className={classes.img_wrapper} src={caption_img} alt="등산" />
         <figcaption className={classes.caption_wrapper}>
-          <h2>{props.text[0]}</h2>
-          {scrollReached && <h1>{props.title}</h1>}
-          <p>{props.text[1]}</p>
+          {scrollReached && (
+            <>
+              <h2>{props.text[0]}</h2>
+              <h1>{props.title}</h1>
+              <p>{props.text[1]}</p>
+            </>
+          )}
         </figcaption>
       </figure>
     </section>

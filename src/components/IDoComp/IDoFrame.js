@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import classes from './IDoFrame.module.scss';
 import NavContext from '../../context/nav-context';
+import ScrollButton from '../UI/Buttons/ScrollButton';
 
 const TestData = [
   {
@@ -39,10 +40,6 @@ const IDoFrame = () => {
       scrollHandler(e.currentTarget.scrollTop);
     });
   }, []);
-
-  // useEffect(() => {
-  //   navCtx.scrollHandler(1000);
-  // });
 
   useEffect(() => {
     scrollHandler(1);

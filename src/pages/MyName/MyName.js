@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import classes from './MyName.module.scss';
 import NavContext from '../../context/nav-context';
-import data from '../../data/mock.json';
 import MOCK_DATA from '../../data/mock.json';
 import { useNavigate } from 'react-router-dom';
 

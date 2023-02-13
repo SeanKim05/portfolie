@@ -4,6 +4,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   list-style-type: none;
   min-width: 1280px;
+  scroll-snap-type: y mandatory;
 }
 
 div {

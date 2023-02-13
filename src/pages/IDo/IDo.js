@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import classes from './IDo.module.scss';
 import NavContext from '../../context/nav-context';
 import IDoFrame from '../../components/IDoComp/IDoFrame';
+import ScrollButton from '../../components/UI/Buttons/ScrollButton';
 
 const IDo = () => {
   const navCtx = useContext(NavContext);
@@ -11,9 +12,10 @@ const IDo = () => {
   });
 
   return (
-    <div id="test_slideY">
+    <section id="test_slideY" className={classes.ido_container}>
       <IDoFrame />
-    </div>
+      <ScrollButton />
+    </section>
   );
 };
 

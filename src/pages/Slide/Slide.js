@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import FirstSlide from '../../components/SlidesComp/FirstSlide';
 import SecondSlide from '../../components/SlidesComp/SecondSlide';
 import ThirdSlide from '../../components/SlidesComp/ThirdSlide';
+import ScrollButton from '../../components/UI/Buttons/ScrollButton';
 import NavContext from '../../context/nav-context';
 import classes from './Slide.module.scss';
 
@@ -46,9 +47,11 @@ function Mainpage() {
     <div className={classes.main_container} id="main_slideY">
       <section className={classes.slide_main_scroll_section}>
         <FirstSlide title={slideData[0].title} text={slideData[0].text} />
+        <ScrollButton />
       </section>
       <section className={classes.slide_main_scroll_section}>
         <SecondSlide title={slideData[1].title} text={slideData[1].text} />
+        <ScrollButton />
       </section>
       <section className={classes.slide_main_scroll_section}>
         <ThirdSlide title={slideData[2].title} text={slideData[2].text} />

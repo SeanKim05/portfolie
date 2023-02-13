@@ -11,7 +11,7 @@ const DetailedNavigation = () => {
     setFadeout(true);
     setTimeout(() => {
       navClickedHandler(false);
-    }, 2000);
+    }, 1000);
   };
   console.log(fadeout);
 
@@ -26,19 +26,19 @@ const DetailedNavigation = () => {
         >
           <FaArrowLeft />
           <li>
-            <Link to="/">Hello</Link>
+            <Link to="/"> &lt; Hello / &gt;</Link>
           </li>
           <li>
-            <Link to="/main">I'm</Link>
+            <Link to="/main">&lt; I'm / &gt;</Link>
           </li>
           <li>
-            <Link to="/myName">Yu Hyun</Link>
+            <Link to="/myName">&lt; Yu Hyun / &gt;</Link>
           </li>
           <li>
-            <Link to="/Ido">I do</Link>
+            <Link to="/Ido">&lt; I do / &gt;</Link>
           </li>
           <li>
-            <Link to="/IDream">I dream</Link>
+            <Link to="/IDream">&lt; I dream / &gt;</Link>
           </li>
         </div>
       )}

@@ -5,6 +5,7 @@ import ImChangeComp from '../../components/MainComp/ImChangeComp';
 import WorkCarousel from '../../components/MainComp/WorkCarousel';
 import MOCK_DATA from '../../data/mock.json';
 import IDream from '../../components/MainComp/IDream';
+import ScrollButton from '../../components/UI/Buttons/ScrollButton';
 
 const personal_info_data = MOCK_DATA.personal_info;
 
@@ -23,9 +24,11 @@ const Main = () => {
       <div id="main_Y" className={classes.main_container}>
         <section className={classes.main_scroll_section}>
           <ImChangeComp personal_info_data={personal_info_data} />
+          <ScrollButton />
         </section>
         <section className={classes.main_scroll_section}>
           <WorkCarousel />
+          <ScrollButton />
         </section>
         <section className={classes.main_scroll_section}>
           <IDream />

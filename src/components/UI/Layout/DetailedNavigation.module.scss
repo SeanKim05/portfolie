@@ -1,6 +1,12 @@
 @import '../../../styles/animation.scss';
 
+@font-face {
+  font-family: pixel_font;
+  src: url(../../../assets/font/pixelfont.ttf);
+}
+
 .detailed_nav_container {
+  font-family: pixel_font;
   z-index: 3;
   display: flex;
   justify-content: space-between;

@@ -1,10 +1,11 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import classes from './Navigation.module.scss';
 
 import NavContext from '../../../context/nav-context';
 import DetailedNavigation from './DetailedNavigation';
 import logo from '../../../assets/images/logo_transparent.png';
-import { FaBars, FaGithub } from 'react-icons/fa';
+import { FaBars, FaGithub, FaHome } from 'react-icons/fa';
 import { SiNotion } from 'react-icons/si';
 
 function Navigation() {
@@ -26,6 +27,9 @@ function Navigation() {
               alt="메인로고"
             />
             <div className={classes.dev_link_icon}>
+              <Link to="/main" style={{ opacity: 1 / yScrollVal }}>
+                <FaHome />
+              </Link>
               <a
                 href="https://github.com/SeanKim05"
                 style={{ opacity: 1 / yScrollVal }}

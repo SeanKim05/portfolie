@@ -24,7 +24,6 @@
       z-index: 1;
       padding-left: 3rem;
       position: relative;
-
       h1 {
         margin-bottom: 1rem;
         font-weight: 800;
@@ -33,32 +32,35 @@
       }
     }
     h2 {
-      background: linear-gradient(
-        to right,
-        rgb(230, 230, 230) 0,
-        rgb(128, 128, 128) 10%,
-        rgb(230, 230, 230) 20%
-      );
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 4s infinite linear;
+      // background: linear-gradient(
+      //   to right,
+      //   rgb(230, 230, 230) 0,
+      //   rgb(128, 128, 128) 10%,
+      //   rgb(230, 230, 230) 20%
+      // );
+      // background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      // animation: shine 4s infinite linear;
       font-size: 3rem;
       font-weight: 600;
       line-height: 1.5;
-      @keyframes shine {
-        0% {
-          background-position: 0;
-        }
-        100% {
-          background-position: 35rem;
-        }
-      }
+      // @keyframes shine {
+      //   0% {
+      //     background-position: 0;
+      //   }
+      //   100% {
+      //     background-position: 35rem;
+      //   }
+      // }
+      @include sliding_right;
+      bottom: 6rem;
     }
     p {
       font-size: 1.5rem;
       display: flex;
       flex-direction: column;
       line-height: 120%;
+      @include sliding_right;
     }
   }
 }
