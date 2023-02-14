@@ -7,14 +7,14 @@
   .default_nav_wrapper {
     display: flex;
     // width: 100%;
-    padding: 1rem 3.5rem;
+    padding: 1rem 4rem;
     justify-content: space-between;
     svg {
       color: whitesmoke;
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2rem;
+      height: 2rem;
       cursor: pointer;
-      padding-top: 1.5rem;
+      margin-top: 2rem;
     }
     img {
       width: 10rem;

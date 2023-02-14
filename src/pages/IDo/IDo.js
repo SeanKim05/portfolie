@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import classes from './IDo.module.scss';
-import Card from '../../components/IDoComp/Card';
+import NavContext from '../../context/nav-context';
+import IDoFrame from '../../components/IDoComp/IDoFrame';
+import ScrollButton from '../../components/UI/Buttons/ScrollButton';
 
 const IDo = () => {
+  const navCtx = useContext(NavContext);
+
+  useEffect(() => {
+    navCtx.scrollHandler(1000);
+  });
+
   return (
-    <div className={classes.i_do_container}>
-      <section className={classes.i_do_title_section}>
-        <h1>Project</h1>
-      </section>
-      <section className={classes.i_do_card_section}>
-        <Card />
-        <Card />
-        <Card />
-      </section>
-    </div>
+    <section id="test_slideY" className={classes.ido_container}>
+      <IDoFrame />
+      <ScrollButton />
+    </section>
   );
 };
 

@@ -5,30 +5,40 @@ import { Link } from 'react-router-dom';
 import NavContext from '../../../context/nav-context';
 
 const DetailedNavigation = () => {
-  const overlayCtx = useContext(NavContext);
+  const [fadeout, setFadeout] = useState(false);
+  const { clicked, navClickedHandler } = useContext(NavContext);
+  const nav_revert = () => {
+    setFadeout(true);
+    setTimeout(() => {
+      navClickedHandler(false);
+    }, 1000);
+  };
+  console.log(fadeout);
 
   return (
     <>
-      {overlayCtx.clicked && (
+      {clicked && (
         <div
-          className={classes.detailed_nav_container}
-          onClick={() => overlayCtx.navClickedHandler(false)}
+          className={`${classes.detailed_nav_container} ${
+            fadeout ? classes.fade_out : ''
+          }`}
+          onClick={nav_revert}
         >
           <FaArrowLeft />
           <li>
-            <Link to="/">Hello</Link>
+            <Link to="/"> &lt; Hello / &gt;</Link>
           </li>
           <li>
-            <Link to="/main">I'm</Link>
+            <Link to="/main">&lt; I'm / &gt;</Link>
           </li>
           <li>
-            <Link to="/">Yu Hyun</Link>
+            <Link to="/myName">&lt; Yu Hyun / &gt;</Link>
           </li>
           <li>
-            <Link to="/Ido">I do</Link>
+            <Link to="/Ido">&lt; I do / &gt;</Link>
           </li>
           <li>
-            <Link to="/IDream">I dream</Link>
+            <Link to="/IDream">&lt; I dream / &gt;</Link>
           </li>
         </div>
       )}

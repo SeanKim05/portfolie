@@ -1,3 +1,5 @@
+@import '../../styles/animation.scss';
+
 .main_container {
   display: flex;
   justify-content: center;
@@ -5,13 +7,13 @@
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  color: rgb(196, 196, 196);
+  color: white;
   background-color: none;
+  position: relative;
   .caption_wrapper {
     display: flex;
     flex-direction: column;
     z-index: 1;
-
     h2 {
       font-size: 3rem;
       font-weight: 600;
@@ -24,10 +26,6 @@
     }
     .combined_text {
       margin: 2rem 0;
-      span {
-        font-size: 1.5rem;
-        margin-right: 1rem;
-      }
     }
     .bolder_text {
       width: 60%;
@@ -43,15 +41,7 @@
       background-color: black;
       border: 2px solid gray;
       display: inline;
-      animation: fade_in 8s;
-    }
-  }
-  @keyframes fade_in {
-    from {
-      color: black;
-    }
-    to {
-      color: white;
+      @include fade_in;
     }
   }
 }

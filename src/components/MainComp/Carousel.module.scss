@@ -21,7 +21,7 @@
   }
 
   100% {
-    transform: translateX(312rem);
+    transform: translateX(300rem);
   }
 }
 
@@ -37,28 +37,30 @@ img {
   max-width: 100%;
 }
 
-.slide_img_detail {
+.slide_img_text {
   position: absolute;
   top: 50%;
   width: 100%;
   text-align: center;
   opacity: inherit;
-  color: black;
   visibility: hidden;
   font-size: 2rem;
   font-weight: 700;
   opacity: 0;
+  span {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+  }
 }
 
 .slide_img_wrapper:hover {
-  .slide_img_detail {
-    cursor: pointer;
+  .slide_img_text {
+    cursor: default;
     visibility: visible;
-    color: white;
+    color: grey;
     opacity: 1;
   }
   .slide_img {
     transform: perspective(500px) translateZ(2rem);
-    opacity: 0.7;
   }
 }

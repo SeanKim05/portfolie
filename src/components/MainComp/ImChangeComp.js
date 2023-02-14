@@ -1,22 +1,27 @@
 import { useState, useCallback, useEffect } from 'react';
 import classes from './ImChangeComp.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import NavButton from '../UI/NavButton';
 
-function ImChangeComp({ hashtags }) {
+function ImChangeComp({ personal_info_data }) {
   const [newName, setnewName] = useState('김유현');
   const [index, setIndex] = useState('');
 
   const shuffle = useCallback(() => {
-    const index = Math.floor(Math.random() * hashtags.length);
-    setIndex(hashtags[index].id);
-    setnewName(hashtags[index].tag);
-  }, [hashtags]);
+    const index = Math.floor(Math.random() * personal_info_data.length);
+    setIndex(personal_info_data[index].id);
+    setnewName(personal_info_data[index].title);
+  }, [personal_info_data]);
 
   useEffect(() => {
     const intervalID = setInterval(shuffle, 1000);
     return () => clearInterval(intervalID);
   }, [shuffle]);
+
+  const navigate = useNavigate();
+  const go_my_name = () => {
+    navigate('/myName');
+  };
 
   return (
     <div className={classes.im_change_comp_container}>
@@ -27,14 +32,14 @@ function ImChangeComp({ hashtags }) {
           <div className={classes.changing_text_block}>
             저는&nbsp;
             <h1 className={classes.im_text}>
-              <Link to={`/hash_detail/${index}`}>{newName}</Link>
+              <Link to={`/myname_detail/${index}`}>{newName}</Link>
             </h1>
             &nbsp;입니다.
           </div>
           <div className={classes.hash_tag_block}>
-            {hashtags.map(tags => (
+            {personal_info_data.map(tags => (
               <ul key={tags.id}>
-                <Link to={`/hash_detail/${tags.id}`}>#{tags.tag}</Link>
+                <Link to={`/myname_detail/${tags.id}`}>#{tags.title}</Link>
               </ul>
             ))}
           </div>
@@ -45,7 +50,7 @@ function ImChangeComp({ hashtags }) {
             <br />
             이번에는 개발자라는 타이틀을 얻기 위해 발걸음을 옮기는 중입니다.
           </p>
-          <NavButton title="알아보기" />
+          <NavButton title="알아보기" event={go_my_name} />
         </div>
       </section>
     </div>
