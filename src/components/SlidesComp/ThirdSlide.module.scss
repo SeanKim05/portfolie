@@ -47,5 +47,9 @@
       font-style: italic;
       text-align: center;
     }
+    button {
+      @include slow_fade_in;
+      top: 17rem;
+    }
   }
 }
