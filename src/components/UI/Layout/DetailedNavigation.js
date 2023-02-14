@@ -13,7 +13,6 @@ const DetailedNavigation = () => {
       navClickedHandler(false);
     }, 1000);
   };
-  console.log(fadeout);
 
   return (
     <>
