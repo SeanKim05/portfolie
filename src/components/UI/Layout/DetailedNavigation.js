@@ -36,9 +36,9 @@ const DetailedNavigation = () => {
           <li>
             <Link to="/Ido">&lt; I do / &gt;</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/IDream">&lt; I dream / &gt;</Link>
-          </li>
+          </li> */}
         </div>
       )}
     </>
