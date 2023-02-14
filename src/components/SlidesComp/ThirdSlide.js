@@ -4,7 +4,7 @@ import NavContext from '../../context/nav-context';
 import NavButton from '../UI/NavButton';
 import classes from './ThirdSlide.module.scss';
 
-const ThirdSlide = props => {
+const ThirdSlide = ({ title, text }) => {
   const [scrollReached, setScrollReached] = useState(false);
 
   const navigate = useNavigate();
@@ -23,9 +23,9 @@ const ThirdSlide = props => {
       {scrollReached && (
         <>
           <div className={classes.caption_wrapper}>
-            <h1>{props.title}</h1>
-            <p>{props.text[0]}</p>
-            <h2>{props.text[1]}</h2>
+            <h1>{title}</h1>
+            <p>{text[0]}</p>
+            <h2>{text[1]}</h2>
           </div>
           <NavButton title={'여정 둘러보기'} event={goMain} />
         </>
