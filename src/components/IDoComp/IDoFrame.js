@@ -54,7 +54,7 @@ const TestData = [
     personnel: '개인작업',
     url: require('../../assets/images/project_winningi.png'),
     assigned: ['로그인', '매인페이지(그래프)', '게시글 페이지 '],
-    lisnk: 'https://github.com/SeanKim05/winning-i',
+    link: 'https://github.com/SeanKim05/winning-i',
     link1:
       'https://dorian-gorgonzola-46b.notion.site/WINNING-I-aa57b4b77d0a472bb6ed1acb68aa905e',
     link2: 'https://winning-3lzs2o3sm-seankim05.vercel.app/',
