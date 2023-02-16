@@ -66,7 +66,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   @mixin img_slide {
     scroll-snap-align: start;
     height: 100%;
