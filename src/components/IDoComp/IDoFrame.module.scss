@@ -73,9 +73,9 @@
   @mixin img_slide {
     height: 100%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-attachment: fixed;
-    background-size: contain;
+    background-size: 100% 50%;
   }
   .ido_container {
     height: 100vh;
@@ -85,13 +85,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-bottom: 1rem;
+      padding-bottom: 0rem;
       .ido_card_wrapper {
         margin-right: 0rem;
         position: relative;
-        top: 5rem;
         width: 100%;
-        height: 55%;
+        top: 13rem;
+        height: 50%;
         border-radius: 1rem;
         background-color: rgb(33, 32, 33, 0.5);
         color: whitesmoke;
