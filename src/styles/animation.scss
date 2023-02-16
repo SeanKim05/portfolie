@@ -112,3 +112,18 @@
     }
   }
 }
+
+@mixin sliding_top_mobile {
+  position: absolute;
+  animation: top_slide 3s;
+  @keyframes top_slide {
+    from {
+      bottom: 100rem;
+      opacity: 0;
+    }
+    to {
+      bottom: 0rem;
+      opacity: 1;
+    }
+  }
+}

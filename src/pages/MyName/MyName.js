@@ -10,9 +10,6 @@ const MyName = () => {
   const { scrollHandler, yScrollVal } = useContext(NavContext);
   const [fadeout, setFadeout] = useState(false);
   const navigate = useNavigate();
-  // const go_detail = paramsid => {
-  //   navigate(`/myname_detail/${paramsid}`);
-  // };
 
   const go_detail = paramsid => {
     setFadeout(true);
