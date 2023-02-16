@@ -115,10 +115,10 @@ const IDoFrame = () => {
               &nbsp;바로가기&nbsp;
               <div className={classes.ido_link}>
                 <a href={slide.link}>
-                  <FaGithub alt="github" />
+                  <FaGithub alt="github" /> 깃허브
                 </a>
                 <a href={slide.link1}>
-                  <SiNotion alt="github" />
+                  <SiNotion alt="github" /> 코드설명
                 </a>
               </div>
             </li>
