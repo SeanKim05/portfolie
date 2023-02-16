@@ -21,11 +21,16 @@ function Navigation() {
             <div className={classes.menu_icon}>
               <FaBars alt="menu_bar" onClick={() => navClickedHandler(true)} />
             </div>
-            <img
-              style={{ opacity: 1 / yScrollVal }}
-              src={logo}
-              alt="메인로고"
-            />
+            <div>
+              <Link to="/main">
+                <img
+                  style={{ opacity: 1 / yScrollVal }}
+                  src={logo}
+                  alt="메인로고"
+                />
+              </Link>
+            </div>
+
             <div className={classes.dev_link_icon}>
               <Link to="/main" style={{ opacity: 1 / yScrollVal }}>
                 <FaHome />

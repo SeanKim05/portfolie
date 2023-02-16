@@ -9,7 +9,7 @@ const SecondSlide = props => {
   console.log(scrollReached);
 
   useEffect(() => {
-    if (yScrollVal >= 900) {
+    if (yScrollVal >= 500) {
       setScrollReached(true);
     } else {
       setScrollReached(false);

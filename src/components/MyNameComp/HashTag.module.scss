@@ -53,3 +53,57 @@
 .fade_out {
   @include fade_out;
 }
+
+@media (max-width: 500px) {
+  @import '../../styles/animation.scss';
+
+  .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include fade_in;
+    .hashtag_wrapper {
+      width: 85%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: whitesmoke;
+      color: black;
+      border-radius: 0.3rem;
+      padding: 1rem 1.5rem 4rem 1.5rem;
+      margin-top: 5rem;
+      box-shadow: 30px 30px 10px rgb(144, 144, 144);
+      .back_button {
+        width: 100%;
+        margin: 0.5rem;
+        svg {
+          width: 1.2rem;
+          cursor: pointer;
+        }
+      }
+      .img_block {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 60%;
+          border-radius: 0.2rem;
+          margin-bottom: 0.5rem;
+        }
+        h1 {
+          font-size: 1.2rem;
+          font-style: italic;
+          font-weight: 700;
+          color: grey;
+        }
+        p {
+          margin-top: 1rem;
+          font-size: 1rem;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}

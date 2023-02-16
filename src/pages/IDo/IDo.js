@@ -14,7 +14,9 @@ const IDo = () => {
   return (
     <section id="test_slideY" className={classes.ido_container}>
       <IDoFrame />
-      <ScrollButton />
+      <div className={classes.Scroll_button}>
+        <ScrollButton />
+      </div>
     </section>
   );
 };
