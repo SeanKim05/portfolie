@@ -3,7 +3,7 @@ import classes from './IDoFrame.module.scss';
 import NavContext from '../../context/nav-context';
 import { FaGithub } from 'react-icons/fa';
 import { SiNotion } from 'react-icons/si';
-import { IoDocumentAttachOutline } from 'react-icons/io';
+import { GrDocument } from 'react-icons/gr';
 
 const TestData = [
   {
@@ -120,7 +120,7 @@ const IDoFrame = () => {
                   <SiNotion alt="github" /> 코드설명
                 </a>
                 <a href={slide.link2}>
-                  <IoDocumentAttachOutline alt="deployed" /> 베포사이트
+                  <GrDocument alt="deployed" /> 베포사이트
                 </a>
               </div>
             </li>
