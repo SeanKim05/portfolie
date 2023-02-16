@@ -39,10 +39,29 @@
         font-size: 1rem;
         margin: 1rem;
         list-style: '\2705';
+        a {
+          text-decoration: underline;
+          text-underline-offset: 0.2rem;
+        }
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
       }
       span {
         li {
           list-style-type: '\1f449';
+        }
+      }
+
+      .ido_link {
+        margin: 1rem;
+        a {
+          margin-left: 0.5rem;
+        }
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
         }
       }
     }
