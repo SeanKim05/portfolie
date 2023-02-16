@@ -41,24 +41,22 @@ img {
   position: absolute;
   top: 50%;
   width: 100%;
+  height: 100%;
   text-align: center;
-  opacity: inherit;
   visibility: hidden;
-  font-size: 2rem;
-  font-weight: 700;
-  opacity: 0;
-  span {
-    text-decoration: underline;
-    text-underline-offset: 0.5rem;
-  }
+  cursor: default;
 }
 
 .slide_img_wrapper:hover {
   .slide_img_text {
-    cursor: default;
     visibility: visible;
-    color: grey;
-    opacity: 1;
+    span {
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+      color: grey;
+      font-size: 2rem;
+      font-weight: 700;
+    }
   }
   .slide_img {
     transform: perspective(500px) translateZ(2rem);

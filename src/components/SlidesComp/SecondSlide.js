@@ -6,13 +6,15 @@ import NavContext from '../../context/nav-context';
 const SecondSlide = props => {
   const { yScrollVal } = useContext(NavContext);
   const [scrollReached, setScrollReached] = useState(false);
+  console.log(scrollReached);
 
   useEffect(() => {
-    if (yScrollVal > 700) {
+    if (yScrollVal >= 900) {
       setScrollReached(true);
+    } else {
+      setScrollReached(false);
     }
   }, [yScrollVal]);
-  console.log(scrollReached);
 
   return (
     <section className={classes.main_container}>

@@ -27,13 +27,13 @@
   animation: slow_fade_in 6s;
   @keyframes slow_fade_in {
     0% {
-      color: rgb(0, 0, 0, 0);
+      opacity: 0;
     }
     50% {
-      color: rgb(0, 0, 0, 0);
+      opacity: 0;
     }
     100% {
-      color: white;
+      opacity: 1;
     }
   }
 }
@@ -88,7 +88,7 @@
   animation: right_slide 3s;
   @keyframes right_slide {
     from {
-      right: -40rem;
+      right: -30rem;
       opacity: 0;
     }
     to {
