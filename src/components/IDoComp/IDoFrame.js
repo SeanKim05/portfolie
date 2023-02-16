@@ -28,7 +28,7 @@ const TestData = [
     link: 'https://github.com/SeanKim05/2nd_project_sajo_workshop',
     link1:
       'https://dorian-gorgonzola-46b.notion.site/2-e4a85349b5674e4bac3e947e958d0520',
-    lienk2: 'https://www.youtube.com/watch?v=0NputbNx3_s',
+    link2: 'https://www.youtube.com/watch?v=0NputbNx3_s',
   },
   {
     title: 'HAII',
@@ -54,7 +54,9 @@ const TestData = [
     personnel: '개인작업',
     url: require('../../assets/images/project_winningi.png'),
     assigned: ['로그인', '매인페이지(그래프)', '게시글 페이지 '],
-    link: 'https://dorian-gorgonzola-46b.notion.site/WINNING-I-aa57b4b77d0a472bb6ed1acb68aa905e',
+    lisnk: 'https://github.com/SeanKim05/winning-i',
+    link1:
+      'https://dorian-gorgonzola-46b.notion.site/WINNING-I-aa57b4b77d0a472bb6ed1acb68aa905e',
     link2: 'https://winning-3lzs2o3sm-seankim05.vercel.app/',
   },
   {
@@ -67,7 +69,9 @@ const TestData = [
       '배터리 상태에 따른 값 표 렌더링',
       '마우스 hover시 row 스타일 변경',
     ],
-    link: 'https://dorian-gorgonzola-46b.notion.site/Bodit-998f3e6ebae94aec8115dd220edcf82b',
+    link: 'https://github.com/SeanKim05/poject_bodit',
+    link1:
+      'https://dorian-gorgonzola-46b.notion.site/Bodit-998f3e6ebae94aec8115dd220edcf82b',
     link2: 'https://seankim05.github.io/bodit-team2/',
   },
 ];
@@ -120,7 +124,7 @@ const IDoFrame = () => {
                   <SiNotion alt="github" /> 코드설명
                 </a>
                 <a href={slide.link2}>
-                  <GrDocument alt="deployed" /> 베포사이트
+                  <GrDocument alt="deployed" /> 시연 페이지
                 </a>
               </div>
             </li>
