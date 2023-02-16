@@ -21,6 +21,7 @@
       align-items: center;
       justify-content: center;
       h1 {
+        @include sliding_left_fast;
         bottom: 12rem;
         width: 100%;
         text-align: center;
@@ -32,12 +33,14 @@
       }
 
       p {
+        @include sliding_left;
         font-size: 1.2rem;
         width: 100%;
         text-align: center;
       }
 
       h2 {
+        @include slow_fade_in;
         top: 12rem;
         width: 100%;
         font-size: 1.3rem;
