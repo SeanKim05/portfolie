@@ -11,8 +11,7 @@ const IDream = () => {
         <DayCounter />
         &nbsp;+1 내일
       </div>
-      <p>정상에 가까워지기 위해, 개발자가 되기 위해 오늘도 생각합니다.</p>
-      <NavButton title="생각보기" />
+      <p>정상에 가까워지기 위해, 개발자가 되기 위해 오늘도 나아갑니다.</p>
     </section>
   );
 };
