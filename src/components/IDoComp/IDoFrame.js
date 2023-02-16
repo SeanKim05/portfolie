@@ -3,6 +3,7 @@ import classes from './IDoFrame.module.scss';
 import NavContext from '../../context/nav-context';
 import { FaGithub } from 'react-icons/fa';
 import { SiNotion } from 'react-icons/si';
+import { IoDocumentAttachOutline } from 'react-icons/io';
 
 const TestData = [
   {
@@ -15,6 +16,7 @@ const TestData = [
     link: 'https://github.com/SeanKim05/1st_project_roecy',
     link1:
       'https://dorian-gorgonzola-46b.notion.site/1-Roecy-29b07ad7a7bd46959bb963902a903029',
+    link2: 'https://www.youtube.com/watch?v=S9G8jmITVRc',
   },
   {
     title: '4조의 공방',
@@ -26,6 +28,7 @@ const TestData = [
     link: 'https://github.com/SeanKim05/2nd_project_sajo_workshop',
     link1:
       'https://dorian-gorgonzola-46b.notion.site/2-e4a85349b5674e4bac3e947e958d0520',
+    lienk2: 'https://www.youtube.com/watch?v=0NputbNx3_s',
   },
   {
     title: 'HAII',
@@ -42,6 +45,7 @@ const TestData = [
     link: 'https://github.com/SeanKim05/project_haii',
     link1:
       'https://dorian-gorgonzola-46b.notion.site/HAII-e438d69a4c124abea867958b61217985',
+    link2: 'https://project-haii.vercel.app/',
   },
   {
     title: 'Winning-I',
@@ -51,6 +55,7 @@ const TestData = [
     url: require('../../assets/images/project_winningi.png'),
     assigned: ['로그인', '매인페이지(그래프)', '게시글 페이지 '],
     link: 'https://dorian-gorgonzola-46b.notion.site/WINNING-I-aa57b4b77d0a472bb6ed1acb68aa905e',
+    link2: 'https://winning-3lzs2o3sm-seankim05.vercel.app/',
   },
   {
     title: 'Bodit',
@@ -63,6 +68,7 @@ const TestData = [
       '마우스 hover시 row 스타일 변경',
     ],
     link: 'https://dorian-gorgonzola-46b.notion.site/Bodit-998f3e6ebae94aec8115dd220edcf82b',
+    link2: 'https://seankim05.github.io/bodit-team2/',
   },
 ];
 
@@ -75,13 +81,6 @@ const IDoFrame = () => {
       scrollHandler(e.currentTarget.scrollTop);
     });
   }, []);
-
-  // useEffect(() => {
-  //   scrollHandler(1);
-  //   document.getElementById('test_slideY').addEventListener('scroll', e => {
-  //     scrollHandler(e.currentTarget.scrollTop);
-  //   });
-  // }, []);
 
   console.log(yScrollVal);
 
@@ -119,6 +118,9 @@ const IDoFrame = () => {
                 </a>
                 <a href={slide.link1}>
                   <SiNotion alt="github" /> 코드설명
+                </a>
+                <a href={slide.link2}>
+                  <IoDocumentAttachOutline alt="deployed" /> 베포사이트
                 </a>
               </div>
             </li>
