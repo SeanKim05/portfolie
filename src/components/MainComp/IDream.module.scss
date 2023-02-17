@@ -1,6 +1,6 @@
 .idream_container {
   background-image: url('../../assets/images/hiking3.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
@@ -18,5 +18,12 @@
     padding: 0 1rem;
     width: 93%;
     text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .idream_container {
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
