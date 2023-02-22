@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Slide from './pages/Slide/Slide';
 import Main from './pages/Main/Main';
 import Navigation from './components/UI/Layout/Navigation';
-import HashTag from './components/MyNameComp/HashTag';
+import MyNameDetail from './components/MyNameComp/MyNameDetail';
 import IDo from './pages/IDo/IDo';
 import Overlay from './components/UI/Layout/Overlay';
 import NavContext from './context/nav-context';
@@ -21,7 +21,7 @@ const Router = () => {
         <Route path="/" element={<Slide />} />
         <Route path="/main" element={<Main />} />
         <Route path="/myName" element={<MyName />} />
-        <Route path="/myname_detail/:tag_id" element={<HashTag />} />
+        <Route path="/myname_detail/:tag_id" element={<MyNameDetail />} />
         <Route path="/iDo" element={<IDo />} />
         <Route path="/test" element={<Test />} />
       </Routes>

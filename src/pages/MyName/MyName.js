@@ -3,20 +3,12 @@ import classes from './MyName.module.scss';
 import NavContext from '../../context/nav-context';
 import MOCK_DATA from '../../data/mock.json';
 import { useNavigate } from 'react-router-dom';
+import MyNameFrame from '../../components/MyNameComp/MyNameFrame';
 
 const personal_info_data = MOCK_DATA.personal_info;
 
 const MyName = () => {
-  const { scrollHandler, yScrollVal } = useContext(NavContext);
-  const [fadeout, setFadeout] = useState(false);
-  const navigate = useNavigate();
-
-  const go_detail = paramsid => {
-    setFadeout(true);
-    setTimeout(() => {
-      navigate(`/myname_detail/${paramsid}`);
-    }, 900);
-  };
+  const { scrollHandler } = useContext(NavContext);
 
   useEffect(() => {
     scrollHandler(1);
@@ -30,25 +22,8 @@ const MyName = () => {
   }, []);
 
   return (
-    <section
-      id="my_name_Y"
-      className={`${classes.my_name_container} ${
-        fadeout ? classes.fade_out : ''
-      }`}
-    >
-      <div className={classes.frame}>
-        {personal_info_data.map(img => (
-          <div
-            className={classes.img_wrapper}
-            onClick={() => {
-              setFadeout(true);
-              go_detail(img.id);
-            }}
-          >
-            <img src={require(`../../assets/images/${img.img_name}`)}></img>
-          </div>
-        ))}
-      </div>
+    <section id="my_name_Y" className={classes.my_name_container}>
+      <MyNameFrame personal_info_data={personal_info_data} />
     </section>
   );
 };

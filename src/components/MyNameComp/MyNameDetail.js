@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import classes from './HashTag.module.scss';
+import classes from './MyNameDetail.module.scss';
 import { useParams } from 'react-router-dom';
 import { BsBackspace } from 'react-icons/bs';
 import MOCK_DATA from '../../data/mock.json';
 
-const HashTag = () => {
+const MyNameDetail = () => {
   const [fadeout, setFadeout] = useState(false);
   const { tag_id } = useParams();
   const personal_info_data = MOCK_DATA.personal_info;
@@ -45,4 +45,4 @@ const HashTag = () => {
   );
 };
 
-export default HashTag;
+export default MyNameDetail;
