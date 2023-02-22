@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import classes from './ImChangeComp.module.scss';
 import { Link, useNavigate } from 'react-router-dom';
-import NavButton from '../UI/NavButton';
+import NavButton from '../UI/Buttons/NavButton';
 
 function ImChangeComp({ personal_info_data }) {
   const [newName, setnewName] = useState('김유현');

@@ -1,5 +1,9 @@
 @import '../../styles/animation.scss';
 
+.fade_out {
+  @include fade_out;
+}
+
 .container {
   height: 100vh;
   display: flex;
@@ -50,10 +54,6 @@
   }
 }
 
-.fade_out {
-  @include fade_out;
-}
-
 @media (max-width: 500px) {
   @import '../../styles/animation.scss';
 
@@ -81,7 +81,7 @@
         }
         p {
           margin-top: 1rem;
-          font-size: 1rem;
+          font-size: 0.9rem;
           line-height: 1.2;
         }
       }

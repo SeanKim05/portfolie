@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Carousel from './Carousel';
-import NavButton from '../UI/NavButton';
+import NavButton from '../UI/Buttons/NavButton';
 import NavContext from '../../context/nav-context';
 import DayCounter from './DayCounter';
 import classes from './WorkCarousel.module.scss';
