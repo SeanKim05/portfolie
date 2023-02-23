@@ -2,9 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import classes from './Main.module.scss';
 import NavContext from '../../context/nav-context';
 import ImChangeComp from '../../components/MainComp/ImChangeComp';
-import WorkCarousel from '../../components/MainComp/WorkCarousel';
+import Work from '../../components/MainComp/WorkComp/Work';
 import MOCK_DATA from '../../data/mock.json';
-import IDream from '../../components/MainComp/IDream';
 import ScrollButton from '../../components/UI/Buttons/ScrollButton';
 
 const personal_info_data = MOCK_DATA.personal_info;
@@ -27,11 +26,7 @@ const Main = () => {
           <ScrollButton />
         </section>
         <section className={classes.main_scroll_section}>
-          <WorkCarousel />
-          <ScrollButton />
-        </section>
-        <section className={classes.main_scroll_section}>
-          <IDream />
+          <Work />
         </section>
       </div>
     </>

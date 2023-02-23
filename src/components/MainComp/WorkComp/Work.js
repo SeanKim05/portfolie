@@ -1,10 +1,10 @@
 import { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Carousel from './Carousel';
-import NavButton from '../UI/Buttons/NavButton';
-import NavContext from '../../context/nav-context';
+import NavButton from '../../UI/Buttons/NavButton';
+import NavContext from '../../../context/nav-context';
 import DayCounter from './DayCounter';
-import classes from './WorkCarousel.module.scss';
+import classes from './Work.module.scss';
 import {
   SiJavascript,
   SiCss3,
@@ -14,7 +14,7 @@ import {
   SiGit,
 } from 'react-icons/si';
 
-const IDoWork = () => {
+const Work = () => {
   const { yScrollVal } = useContext(NavContext);
   const [scrollReached, setScrollReached] = useState(false);
 
@@ -24,8 +24,10 @@ const IDoWork = () => {
   };
 
   useEffect(() => {
-    if (yScrollVal > 700) {
-      setScrollReached(true);
+    if (yScrollVal > 500) {
+      setTimeout(() => {
+        setScrollReached(true);
+      }, 1000);
     } else {
       setScrollReached(false);
     }
@@ -63,4 +65,4 @@ const IDoWork = () => {
   );
 };
 
-export default IDoWork;
+export default Work;

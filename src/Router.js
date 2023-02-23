@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Slide from './pages/Slide/Slide';
+import Intro from './pages/Intro/Intro';
 import Main from './pages/Main/Main';
 import Navigation from './components/UI/Layout/Navigation';
 import MyNameDetail from './components/MyNameComp/MyNameDetail';
@@ -18,7 +18,7 @@ const Router = () => {
       {clicked ? <Overlay /> : ''}
       <Navigation />
       <Routes>
-        <Route path="/" element={<Slide />} />
+        <Route path="/" element={<Intro />} />
         <Route path="/main" element={<Main />} />
         <Route path="/myName" element={<MyName />} />
         <Route path="/myname_detail/:tag_id" element={<MyNameDetail />} />

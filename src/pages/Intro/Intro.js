@@ -1,10 +1,10 @@
 import React, { useEffect, useContext } from 'react';
-import FirstSlide from '../../components/SlidesComp/FirstSlide';
-import SecondSlide from '../../components/SlidesComp/SecondSlide';
-import ThirdSlide from '../../components/SlidesComp/ThirdSlide';
+import FirstSlide from '../../components/IntroComp/FirstSlide';
+import SecondSlide from '../../components/IntroComp/SecondSlide';
+import ThirdSlide from '../../components/IntroComp/ThirdSlide';
 import ScrollButton from '../../components/UI/Buttons/ScrollButton';
 import NavContext from '../../context/nav-context';
-import classes from './Slide.module.scss';
+import classes from './Intro.module.scss';
 
 const slideData = [
   {
@@ -33,8 +33,8 @@ const slideData = [
   },
 ];
 
-function Mainpage() {
-  const { yScrollVal, scrollHandler } = useContext(NavContext);
+function Intro() {
+  const { scrollHandler } = useContext(NavContext);
 
   useEffect(() => {
     scrollHandler(1);
@@ -60,4 +60,4 @@ function Mainpage() {
   );
 }
 
-export default Mainpage;
+export default Intro;

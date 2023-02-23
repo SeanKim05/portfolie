@@ -19,8 +19,8 @@
       height: 100%;
     }
     .caption_wrapper {
-      @include sliding_top;
-      z-index: 1;
+      @include sliding_right;
+      z-index: 3;
       padding-left: 3rem;
       position: relative;
       h1 {

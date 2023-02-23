@@ -7,8 +7,8 @@
 
 .slide_track {
   display: flex;
-  width: 800rem;
-  animation: scroll 20s linear infinite;
+  width: 750rem;
+  animation: scroll 10s linear infinite;
 }
 
 .slide_track:hover {
@@ -21,7 +21,7 @@
   }
 
   100% {
-    transform: translateX(300rem);
+    transform: translateX(250rem);
   }
 }
 

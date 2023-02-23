@@ -43,12 +43,36 @@
       "text": "저는 기계설계산업 기사 자격증을 소지하고 있습니다.\n개발자가 코드를 통해서 정보를 전달하듯 엔지니어는 도면을 통해서 소통합니다.\n두 작업 모두 제작자가 사용자에게 전달하고자 하는 정보를 정확하게 그리고 보기 편하게 제공해야 한다는 것에 큰 의의가 둡니다.\n그런 점에서 코딩과 설계는 동일선상에 있지 않나 싶습니다. 도면을 그리듯 코드를 짜기 위해 노력하는 저는 설계산업 기사입니다."
     }
   ],
-  "carousel": [{ "id": 0, "url": "/" }],
   "project": [
     {
+      "id": 0,
       "title": "Roecy",
       "text": "Justcode 1차 프로젝트",
       "img_name": "project_roecy.png"
+    },
+    {
+      "id": 1,
+      "title": "사조의 공방",
+      "text": "",
+      "img_name": "project_sajo.png"
+    },
+    {
+      "id": 2,
+      "title": "HAII",
+      "text": "",
+      "img_name": "project_haii.png"
+    },
+    {
+      "id": 3,
+      "title": "Bodit",
+      "text": "",
+      "img_name": "project_bodit.png"
+    },
+    {
+      "id": 4,
+      "title": "Winning-I",
+      "text": "",
+      "img_name": "project_winningi.png"
     }
   ]
 }
