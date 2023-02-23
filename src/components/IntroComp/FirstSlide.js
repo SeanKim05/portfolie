@@ -1,7 +1,10 @@
+import React, { useContext, useEffect, useState } from 'react';
 import classes from './FirstSlide.module.scss';
 import Video from '../../assets/videos/Mountain.mp4';
+import NavContext from '../../context/nav-context';
 
 const FirstSlide = props => {
+  const { yScrollVal } = useContext(NavContext);
   return (
     <section className={classes.main_container}>
       <div className={classes.caption_wrapper}>

@@ -16,20 +16,23 @@ const SecondSlide = ({ text, title }) => {
       setScrollReached(false);
     }
   }, [yScrollVal]);
+  console.log(scrollReached);
 
   return (
-    <section className={classes.main_container}>
-      <figure className={classes.slide_figure}>
-        <img className={classes.img_wrapper} src={caption_img} alt="등산" />
-        {scrollReached && (
-          <figcaption className={classes.caption_wrapper}>
-            <h2>{text[0]}</h2>
-            <h1>{title}</h1>
-            <p>{text[1]}</p>
-          </figcaption>
-        )}
-      </figure>
-    </section>
+    <>
+      {scrollReached && (
+        <section className={classes.main_container}>
+          <figure className={classes.slide_figure}>
+            <img className={classes.img_wrapper} src={caption_img} alt="등산" />
+            <figcaption className={classes.caption_wrapper}>
+              <h2>{text[0]}</h2>
+              <h1>{title}</h1>
+              <p>{text[1]}</p>
+            </figcaption>
+          </figure>
+        </section>
+      )}
+    </>
   );
 };
 
