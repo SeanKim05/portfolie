@@ -3,3 +3,18 @@
     display: none;
   }
 }
+
+.progress_bar_wrapper {
+  background-color: black;
+  height: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+}
+.progress_bar {
+  height: 1rem;
+  background-color: green;
+  width: 10%;
+}

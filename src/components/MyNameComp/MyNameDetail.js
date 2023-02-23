@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { BsBackspace } from 'react-icons/bs';
 import MOCK_DATA from '../../data/mock.json';
 
-const MyNameDetail = () => {
+const HashTag = () => {
   const [fadeout, setFadeout] = useState(false);
   const { tag_id } = useParams();
   const personal_info_data = MOCK_DATA.personal_info;
@@ -43,4 +43,4 @@ const MyNameDetail = () => {
   );
 };
 
-export default MyNameDetail;
+export default HashTag;
