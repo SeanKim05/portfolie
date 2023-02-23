@@ -18,8 +18,6 @@ const MyNameDetail = () => {
     }, 900);
   };
 
-  console.log(fadeout);
-
   return (
     <div className={`${classes.container} ${fadeout ? classes.fade_out : ''}`}>
       <article className={classes.hashtag_wrapper}>

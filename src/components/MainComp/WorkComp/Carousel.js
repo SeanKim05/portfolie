@@ -1,12 +1,7 @@
 import React from 'react';
 import classes from './Carousel.module.scss';
-import PROJECT_MOCK_DATA from '../../../data/mock.json';
 
-console.log(PROJECT_MOCK_DATA.project);
-
-const Carousel = () => {
-  const project_data = PROJECT_MOCK_DATA.project;
-
+const Carousel = ({ project_data }) => {
   return (
     <section className={classes.carousel_container}>
       <div className={classes.slider}>

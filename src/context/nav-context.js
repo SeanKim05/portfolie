@@ -20,8 +20,6 @@ export const NavContextProvider = props => {
 
   useEffect(() => {});
 
-  console.log(yScrollVal);
-
   const contextValue = {
     clicked,
     navClickedHandler,

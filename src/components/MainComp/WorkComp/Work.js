@@ -5,6 +5,7 @@ import NavButton from '../../UI/Buttons/NavButton';
 import NavContext from '../../../context/nav-context';
 import DayCounter from './DayCounter';
 import classes from './Work.module.scss';
+import PROJECT_MOCK_DATA from '../../../data/mock.json';
 import {
   SiJavascript,
   SiCss3,
@@ -33,6 +34,8 @@ const Work = () => {
     }
   }, [yScrollVal]);
 
+  const project_data = PROJECT_MOCK_DATA.project;
+
   return (
     <div className={classes.day_counter_container}>
       <section className={classes.counter_box}>
@@ -59,7 +62,7 @@ const Work = () => {
         )}
       </section>
       <section className={classes.work_elem_wrapper}>
-        <Carousel />
+        <Carousel project_data={project_data} />
       </section>
     </div>
   );

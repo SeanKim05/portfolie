@@ -19,7 +19,7 @@
     flex-direction: column;
     position: relative;
     .counter_wrapper {
-      @include sliding_right;
+      @include sliding_left;
       margin-top: 1rem;
       padding: 1.5rem 0;
       width: 100%;

@@ -16,7 +16,6 @@ const SecondSlide = ({ text, title }) => {
       setScrollReached(false);
     }
   }, [yScrollVal]);
-  console.log(scrollReached);
 
   return (
     <>

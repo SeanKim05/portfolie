@@ -4,34 +4,10 @@ import SecondSlide from '../../components/IntroComp/SecondSlide';
 import ThirdSlide from '../../components/IntroComp/ThirdSlide';
 import ScrollButton from '../../components/UI/Buttons/ScrollButton';
 import NavContext from '../../context/nav-context';
+import SLIDE_MOCK_DATA from '../../data/mock.json';
 import classes from './Intro.module.scss';
 
-const slideData = [
-  {
-    id: 0,
-    title: '정상에 오를 수 있을까?',
-    text: [
-      '매번 하는 그 걱정',
-      '출발점에서 정상을 바라볼 때 막연함에 가장 처음드는 생각,\n등산을 처음하는 초보부터 에베레스트를 오르는 전문가까지 모두 가지는.',
-    ],
-  },
-  {
-    id: 1,
-    title: '오를 수 있습니다.',
-    text: [
-      '첫 발자국을 남길 수 있다면,',
-      '그 미약해보이는 시작과 발자국들이 \n모이고 모여서 결국 정상에 닿게 할 것이라는 믿습니다',
-    ],
-  },
-  {
-    id: 2,
-    title: '시작하는 것의 가치',
-    text: [
-      '그것의 위대함을 믿고있고 소중하게 생각하기 때문에 \n정상에 가까워지기 위해서 오늘도 한 걸음 한 걸음 앞으로 나아갑니다.',
-      '지금부터 개발자를 향한 제 여정을 소개합니다.',
-    ],
-  },
-];
+const slide_data = SLIDE_MOCK_DATA.slide_data;
 
 function Intro() {
   const { scrollHandler } = useContext(NavContext);
@@ -46,15 +22,15 @@ function Intro() {
   return (
     <div className={classes.main_container} id="main_slideY">
       <section className={classes.slide_main_scroll_section}>
-        <FirstSlide title={slideData[0].title} text={slideData[0].text} />
+        <FirstSlide title={slide_data[0].title} text={slide_data[0].text} />
         <ScrollButton />
       </section>
       <section className={classes.slide_main_scroll_section}>
-        <SecondSlide title={slideData[1].title} text={slideData[1].text} />
+        <SecondSlide title={slide_data[1].title} text={slide_data[1].text} />
         <ScrollButton />
       </section>
       <section className={classes.slide_main_scroll_section}>
-        <ThirdSlide title={slideData[2].title} text={slideData[2].text} />
+        <ThirdSlide title={slide_data[2].title} text={slide_data[2].text} />
       </section>
     </div>
   );
