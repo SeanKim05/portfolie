@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import classes from './HashTag.module.scss';
-import { useParams } from 'react-router-dom';
-import { BsBackspace } from 'react-icons/bs';
+import { useState, useContext, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import classes from './MyNameDetail.module.scss';
+import NavContext from '../../context/nav-context';
 import MOCK_DATA from '../../data/mock.json';
+import { BsBackspace } from 'react-icons/bs';
 
 const HashTag = () => {
   const [fadeout, setFadeout] = useState(false);
   const { tag_id } = useParams();
+  const { scrollHandler } = useContext(NavContext);
   const personal_info_data = MOCK_DATA.personal_info;
   const navigate = useNavigate();
 
@@ -18,7 +19,9 @@ const HashTag = () => {
     }, 900);
   };
 
-  console.log(fadeout);
+  useEffect(() => {
+    scrollHandler(1);
+  }, []);
 
   return (
     <div className={`${classes.container} ${fadeout ? classes.fade_out : ''}`}>

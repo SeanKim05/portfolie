@@ -1,10 +1,11 @@
 import { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Carousel from './Carousel';
-import NavButton from '../UI/NavButton';
-import NavContext from '../../context/nav-context';
+import NavButton from '../../UI/Buttons/NavButton';
+import NavContext from '../../../context/nav-context';
 import DayCounter from './DayCounter';
-import classes from './WorkCarousel.module.scss';
+import classes from './Work.module.scss';
+import PROJECT_MOCK_DATA from '../../../data/mock.json';
 import {
   SiJavascript,
   SiCss3,
@@ -14,7 +15,7 @@ import {
   SiGit,
 } from 'react-icons/si';
 
-const IDoWork = () => {
+const Work = () => {
   const { yScrollVal } = useContext(NavContext);
   const [scrollReached, setScrollReached] = useState(false);
 
@@ -24,12 +25,16 @@ const IDoWork = () => {
   };
 
   useEffect(() => {
-    if (yScrollVal > 700) {
-      setScrollReached(true);
+    if (yScrollVal > 500) {
+      setTimeout(() => {
+        setScrollReached(true);
+      }, 1000);
     } else {
       setScrollReached(false);
     }
   }, [yScrollVal]);
+
+  const project_data = PROJECT_MOCK_DATA.project;
 
   return (
     <div className={classes.day_counter_container}>
@@ -57,10 +62,10 @@ const IDoWork = () => {
         )}
       </section>
       <section className={classes.work_elem_wrapper}>
-        <Carousel />
+        <Carousel project_data={project_data} />
       </section>
     </div>
   );
 };
 
-export default IDoWork;
+export default Work;

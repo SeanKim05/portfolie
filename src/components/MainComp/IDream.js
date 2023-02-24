@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './IDream.module.scss';
 import DayCounter from './DayCounter';
-import NavButton from '../UI/NavButton';
 
 const IDream = () => {
   return (
