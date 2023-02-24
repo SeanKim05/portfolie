@@ -43,7 +43,7 @@
 @media screen and (max-width: 500px) {
   .detailed_nav_container {
     margin: 0.5rem;
-    z-index: 5;
+    z-index: 100;
     display: flex;
     justify-content: space-around;
     align-items: center;
