@@ -1,4 +1,7 @@
+@import '../../styles/animation.scss';
+
 .main_container {
+  @include fade_in;
   height: 100vh;
   width: 100%;
   scroll-snap-type: y mandatory;

@@ -37,7 +37,7 @@ const IDo = () => {
         <div
           className={classes.progress_bar}
           style={{ width: `${scrollTop}%` }}
-        ></div>
+        />
       </div>
       <section id="test_slideY" className={classes.ido_container}>
         <IDoFrame project_data={project_data} />

@@ -1,20 +1,26 @@
+@import '../../styles/animation.scss';
+
 @media (max-width: 500px) {
   .Scroll_button {
     display: none;
   }
 }
 
+.ido_container {
+  @include fade_in;
+}
 .progress_bar_wrapper {
-  background-color: black;
-  height: 1rem;
+  background-color: #666666;
+  height: 0.5rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
   width: 100%;
-}
-.progress_bar {
-  height: 1rem;
-  background-color: green;
-  width: 10%;
+
+  .progress_bar {
+    height: 0.5rem;
+    background: #32cd32;
+    width: 10%;
+  }
 }

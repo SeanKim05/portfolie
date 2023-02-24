@@ -16,7 +16,7 @@ const IDoFrame = ({ project_data }) => {
   }, []);
 
   return (
-    <div id="test_slideY" className={classes.ido_container}>
+    <div className={classes.ido_container}>
       {project_data.map(data => (
         <section
           key={data.id}
