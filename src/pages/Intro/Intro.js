@@ -14,11 +14,16 @@ function Intro() {
 
   useEffect(() => {
     scrollHandler(1);
-  });
+  }, []);
 
   useEffect(() => {
     document.getElementById('main_slideY').addEventListener('scroll', e => {
-      scrollHandler(e.currentTarget.scrollTop);
+      let screenY = e.currentTarget.scrollTop;
+      if (screenY < 1) {
+        scrollHandler(1);
+      } else {
+        scrollHandler(screenY);
+      }
     });
   }, [scrollHandler]);
 
