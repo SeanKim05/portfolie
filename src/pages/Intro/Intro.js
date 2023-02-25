@@ -14,10 +14,13 @@ function Intro() {
 
   useEffect(() => {
     scrollHandler(1);
+  });
+
+  useEffect(() => {
     document.getElementById('main_slideY').addEventListener('scroll', e => {
       scrollHandler(e.currentTarget.scrollTop);
     });
-  }, []);
+  }, [scrollHandler]);
 
   return (
     <div className={classes.main_container} id="main_slideY">

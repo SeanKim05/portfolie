@@ -13,23 +13,24 @@ const Main = () => {
 
   useEffect(() => {
     scrollHandler(1);
+  });
+
+  useEffect(() => {
     document.getElementById('main_Y').addEventListener('scroll', e => {
       scrollHandler(e.currentTarget.scrollTop);
     });
-  }, []);
+  }, [scrollHandler]);
 
   return (
-    <>
-      <div id="main_Y" className={classes.main_container}>
-        <section className={classes.main_scroll_section}>
-          <ImChangeComp personal_info_data={personal_info_data} />
-          <ScrollButton />
-        </section>
-        <section className={classes.main_scroll_section}>
-          <Work />
-        </section>
-      </div>
-    </>
+    <div id="main_Y" className={classes.main_container}>
+      <section className={classes.main_scroll_section}>
+        <ImChangeComp personal_info_data={personal_info_data} />
+        <ScrollButton />
+      </section>
+      <section className={classes.main_scroll_section}>
+        <Work />
+      </section>
+    </div>
   );
 };
 
