@@ -6,7 +6,7 @@ const NavContext = React.createContext({
   scrollHandler: () => {},
   yScrollVal: 1,
 });
-export const NavContextProvider = props => {
+export const NavContextProvider = ({ children }) => {
   const [clicked, setClicked] = useState(false);
   const [yScrollVal, setYScrollVal] = useState(1);
 
@@ -18,7 +18,7 @@ export const NavContextProvider = props => {
     setYScrollVal(value);
   };
 
-  useEffect(() => {});
+  console.log(yScrollVal);
 
   const contextValue = {
     clicked,
@@ -28,9 +28,7 @@ export const NavContextProvider = props => {
   };
 
   return (
-    <NavContext.Provider value={contextValue}>
-      {props.children}
-    </NavContext.Provider>
+    <NavContext.Provider value={contextValue}>{children}</NavContext.Provider>
   );
 };
 
