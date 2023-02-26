@@ -1,11 +1,14 @@
 ## 프로젝트 포트폴리오
 ### 1. 프로젝트 소개
 #### 자기소개와 작업목록을 담은 포트폴리오 페이지입니다.
+
+### [배포 페이지로 이동](https://portfolio-delta-eight-32.vercel.app/)
+
 <img src="https://user-images.githubusercontent.com/103613612/221344835-8d14a6a3-e153-40a4-bdbb-555508ad7577.png" width="150" height="150"/>
 
 #### 크롬브라우저에 최적화 되어있으며 모바일 뷰 (500px)에서도 확인이 가능합니다.
 
-[배포 페이지로 이동](https://portfolio-delta-eight-32.vercel.app/)
+
 <br />
 ### 2. 사용 툴 
 - HTML, JAVASCRIPT, REACT, SCSS
