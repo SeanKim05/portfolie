@@ -43,10 +43,11 @@
 - display: grid 사용으로 masonry view 구현
 - useparams 사용으로 값에 따른 동적라우팅 구현
 
-![imageslider](https://user-images.githubusercontent.com/103613612/221391387-43b646d7-bd38-414e-8885-20a6732fc9b2.gif)
+![imagesldier](https://user-images.githubusercontent.com/103613612/221391924-f1b69f8d-4617-42f4-8638-17c47d45af6d.gif)
 - newDate 사용으로 날짜 카운터 구현
 - keyframes과 animation-play-state 속성 사용 자동이미지 슬라이더 구현
 - background-attachment와 posiotion sticky 사용 작업목록 페이지 구현
+- scroll indicator 적용으로 스크롤 상태 확인가능
 
 ![navigation](https://user-images.githubusercontent.com/103613612/221391514-4a4b2c73-9ad1-42cf-83b2-9231e404a174.gif)
 - context 사용으로 navigation에 사용되는 값 전역 관리
