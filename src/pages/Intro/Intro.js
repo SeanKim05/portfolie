@@ -27,8 +27,6 @@ function Intro() {
 
   useEffect(() => {
     document.getElementById('main_slideY').addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (

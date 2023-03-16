@@ -26,8 +26,6 @@ const Main = () => {
 
   useEffect(() => {
     document.getElementById('main_Y').addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (

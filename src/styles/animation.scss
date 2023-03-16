@@ -65,11 +65,11 @@
 }
 
 @mixin sliding_right {
-  // position: absolute;
-  animation: right_slide 3s;
+  position: absolute;
+  animation: right_slide 2s;
   @keyframes right_slide {
     0% {
-      transform: translateX(100%);
+      transform: translateX(30%);
     }
     100% {
       transform: translateX(0%);
@@ -91,18 +91,3 @@
     }
   }
 }
-
-// @mixin sliding_top_mobile {
-//   position: absolute;
-//   animation: top_slide 3s;
-//   @keyframes top_slide {
-//     from {
-//       bottom: 100rem;
-//       opacity: 0;
-//     }
-//     to {
-//       bottom: 0rem;
-//       opacity: 1;
-//     }
-//   }
-// }

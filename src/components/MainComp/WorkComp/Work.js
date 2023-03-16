@@ -26,9 +26,7 @@ const Work = () => {
 
   useEffect(() => {
     if (yScrollVal > 500) {
-      setTimeout(() => {
-        setScrollReached(true);
-      }, 1000);
+      setScrollReached(true);
     } else {
       setScrollReached(false);
     }
