@@ -137,6 +137,24 @@
       "link": "https://github.com/SeanKim05/winning-i",
       "link1": "https://dorian-gorgonzola-46b.notion.site/WINNING-I-aa57b4b77d0a472bb6ed1acb68aa905e",
       "link2": "https://winning-3lzs2o3sm-seankim05.vercel.app/"
+    },
+    {
+      "id": 5,
+      "title": "Portfolio",
+      "summary": "개인 포트폴리오 작업",
+      "duration": "2023/2/1 ~ (진행중)",
+      "personnel": "개인작업",
+      "img_name": "project_portfolio.png",
+      "assigned": [
+        "네비게이션바",
+        "이지슬라이더",
+        "날짜 카운터",
+        "타이틀 변경 컴포넌트",
+        "Mansonary 컴포넌트"
+      ],
+      "link": "https://github.com/SeanKim05/portfolio",
+      "link1": "https://dorian-gorgonzola-46b.notion.site/PortFolio-82cfc8af6dfa437eb70bfe02eaa5626f",
+      "link2": "https://portfolio-delta-eight-32.vercel.app/"
     }
   ]
 }

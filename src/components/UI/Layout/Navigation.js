@@ -24,7 +24,7 @@ function Navigation() {
             <div>
               <Link to="/main">
                 <img
-                  style={{ opacity: 1 / yScrollVal }}
+                  style={{ opacity: 10 / yScrollVal }}
                   src={logo}
                   alt="메인로고"
                 />
@@ -32,18 +32,18 @@ function Navigation() {
             </div>
 
             <div className={classes.dev_link_icon}>
-              <Link to="/main" style={{ opacity: 1 / yScrollVal }}>
+              <Link to="/main" style={{ opacity: 10 / yScrollVal }}>
                 <FaHome />
               </Link>
               <a
                 href="https://github.com/SeanKim05"
-                style={{ opacity: 1 / yScrollVal }}
+                style={{ opacity: 10 / yScrollVal }}
               >
                 <FaGithub alt="github" />
               </a>
               <a
                 href="https://dorian-gorgonzola-46b.notion.site/74eef0a73ad04982a0927137ac1eaeb0"
-                style={{ opacity: 1 / yScrollVal }}
+                style={{ opacity: 10 / yScrollVal }}
               >
                 <SiNotion alt="Notion" />
               </a>

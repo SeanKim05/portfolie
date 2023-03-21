@@ -19,8 +19,6 @@ export const NavContextProvider = ({ children }) => {
     setYScrollVal(value);
   };
 
-  console.log(yScrollVal);
-
   const contextValue = {
     clicked,
     navClickedHandler,
