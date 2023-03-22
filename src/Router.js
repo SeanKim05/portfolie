@@ -9,6 +9,7 @@ import Overlay from './components/UI/Layout/Overlay';
 import NavContext from './context/nav-context';
 import Test from './Test/Test';
 import MyName from './pages/MyName/MyName';
+import NotFound from './pages/NotFound/NotFound';
 
 const Router = () => {
   const { clicked } = useContext(NavContext);
@@ -18,12 +19,13 @@ const Router = () => {
       {clicked ? <Overlay /> : ''}
       <Navigation />
       <Routes>
-        <Route path="/" element={<Intro />} />
+        <Route exact path="/" element={<Intro />} />
         <Route path="/main" element={<Main />} />
         <Route path="/myName" element={<MyName />} />
         <Route path="/myname_detail/:tag_id" element={<MyNameDetail />} />
         <Route path="/iDo" element={<IDo />} />
         <Route path="/test" element={<Test />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

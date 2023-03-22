@@ -1,8 +1,9 @@
 .test_container {
-  height: 100vh;
+  height: 200vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  position: relative;
   .scroll_button_wrapper {
     width: 30rem;
     height: 7rem;

@@ -1,0 +1,58 @@
+.scroll_button_wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  height: 7rem;
+  display: flex;
+  font-size: 1.2rem;
+  .scroll_button_section {
+    display: flex;
+    justify-content: center;
+  }
+}
+.scroll_text {
+  position: absolute;
+  bottom: 4.5rem;
+  width: 10rem;
+  text-align: center;
+}
+.scroll_to_top {
+  height: 3rem;
+  width: 3rem;
+  border: 0.2rem solid rgb(244, 244, 244, 0.7);
+  position: absolute;
+  left: 100% -1rem;
+  bottom: 1rem;
+  border-radius: 50%;
+}
+
+.scroll_to_top::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 0.2rem solid rgb(244, 244, 244);
+  height: 1rem;
+  width: 1rem;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-bottom: transparent;
+  border-right: transparent;
+  animation: scroll_down 1s ease-in-out infinite;
+}
+
+@keyframes scroll_down {
+  0% {
+    opacity: 0;
+    top: 90%;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
