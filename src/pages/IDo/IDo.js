@@ -4,12 +4,14 @@ import NavContext from '../../context/nav-context';
 import IDoFrame from '../../components/IDoComp/IDoFrame';
 import PROJECT_MOCKDATA from '../../data/mock.json';
 import ScrollButton from '../../components/UI/Buttons/ScrollButton';
+import ScrollUpButton from '../../components/UI/Buttons/ScrollUpButton';
 
 const project_data = PROJECT_MOCKDATA.project;
 
 const IDo = () => {
   const navCtx = useContext(NavContext);
   const [scrollTop, setScrollTop] = useState(0);
+  const [scrollUp, setScrollUp] = useState(false);
 
   const onScroll = () => {
     const winScroll = document.documentElement.scrollTop;
@@ -24,6 +26,14 @@ const IDo = () => {
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
   }, []);
+
+  useEffect(() => {
+    if (scrollTop === 100) {
+      setScrollUp(true);
+    } else {
+      setScrollUp(false);
+    }
+  }, [scrollTop]);
 
   useEffect(() => {
     navCtx.scrollHandler(1000);
@@ -43,6 +53,7 @@ const IDo = () => {
           <ScrollButton />
         </div>
       </section>
+      {scrollUp && <ScrollUpButton />}
     </>
   );
 };

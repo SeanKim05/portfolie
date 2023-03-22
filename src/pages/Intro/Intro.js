@@ -3,6 +3,7 @@ import FirstSlide from '../../components/IntroComp/FirstSlide';
 import SecondSlide from '../../components/IntroComp/SecondSlide';
 import ThirdSlide from '../../components/IntroComp/ThirdSlide';
 import ScrollButton from '../../components/UI/Buttons/ScrollButton';
+import ScrollUpButton from '../../components/UI/Buttons/ScrollUpButton';
 import NavContext from '../../context/nav-context';
 import SLIDE_MOCK_DATA from '../../data/mock.json';
 import classes from './Intro.module.scss';
