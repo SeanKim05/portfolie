@@ -28,7 +28,7 @@ const IDo = () => {
   }, []);
 
   useEffect(() => {
-    if (scrollTop === 100) {
+    if (scrollTop > 90) {
       setScrollUp(true);
     } else {
       setScrollUp(false);
