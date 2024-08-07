@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from 'react';
-import ScrollUpButton from '../components/UI/Buttons/ScrollUpButton';
-import classes from './Test.module.scss';
+import React, { useContext, useEffect } from "react";
+import ScrollUpButton from "../components/UI/Buttons/ScrollUpButton";
+import classes from "./Test.module.scss";
 
 const Test = () => {
   return (
