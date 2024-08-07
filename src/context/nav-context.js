@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const NavContext = React.createContext({
   clicked: false,
@@ -11,11 +11,11 @@ export const NavContextProvider = ({ children }) => {
   const [clicked, setClicked] = useState(false);
   const [yScrollVal, setYScrollVal] = useState(1);
 
-  const navClickedHandler = value => {
+  const navClickedHandler = (value) => {
     setClicked(value);
   };
 
-  const scrollHandler = value => {
+  const scrollHandler = (value) => {
     setYScrollVal(value);
   };
 

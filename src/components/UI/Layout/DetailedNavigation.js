@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
-import classes from './DetailedNavigation.module.scss';
-import { FaArrowLeft } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import NavContext from '../../../context/nav-context';
+import React, { useContext, useState } from "react";
+import classes from "./DetailedNavigation.module.scss";
+import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import NavContext from "../../../context/nav-context";
 
 const DetailedNavigation = () => {
   const [fadeout, setFadeout] = useState(false);
@@ -19,7 +19,7 @@ const DetailedNavigation = () => {
       {clicked && (
         <div
           className={`${classes.detailed_nav_container} ${
-            fadeout ? classes.fade_out : ''
+            fadeout ? classes.fade_out : ""
           }`}
           onClick={nav_revert}
         >

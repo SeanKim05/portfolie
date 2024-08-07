@@ -1,11 +1,11 @@
-import { useState, useCallback, useEffect } from 'react';
-import classes from './ImChangeComp.module.scss';
-import { Link, useNavigate } from 'react-router-dom';
-import NavButton from '../UI/Buttons/NavButton';
+import { useState, useCallback, useEffect } from "react";
+import classes from "./ImChangeComp.module.scss";
+import { Link, useNavigate } from "react-router-dom";
+import NavButton from "../UI/Buttons/NavButton";
 
 function ImChangeComp({ personal_info_data }) {
-  const [newName, setnewName] = useState('김유현');
-  const [index, setIndex] = useState('');
+  const [newName, setnewName] = useState("김유현");
+  const [index, setIndex] = useState("");
 
   const shuffle = useCallback(() => {
     const index = Math.floor(Math.random() * personal_info_data.length);
@@ -19,7 +19,7 @@ function ImChangeComp({ personal_info_data }) {
 
   const navigate = useNavigate();
   const go_my_name = () => {
-    navigate('/myName');
+    navigate("/myName");
   };
 
   return (
@@ -36,7 +36,7 @@ function ImChangeComp({ personal_info_data }) {
             &nbsp;입니다.
           </div>
           <div className={classes.hash_tag_block}>
-            {personal_info_data.map(tags => (
+            {personal_info_data.map((tags) => (
               <ul key={tags.id}>
                 <Link to={`/myname_detail/${tags.id}`}>#{tags.title}</Link>
               </ul>

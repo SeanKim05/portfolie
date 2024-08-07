@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
-import classes from './SecondSlide.module.scss';
-import caption_img from '../../assets/images/hiking.jpg';
-import NavContext from '../../context/nav-context';
+import React, { useContext, useEffect, useState } from "react";
+import classes from "./SecondSlide.module.scss";
+import caption_img from "../../assets/images/hiking.jpg";
+import NavContext from "../../context/nav-context";
 
 const SecondSlide = ({ text, title }) => {
   const { yScrollVal } = useContext(NavContext);

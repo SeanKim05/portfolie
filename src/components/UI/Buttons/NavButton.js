@@ -1,4 +1,4 @@
-import classes from './NavButton.module.scss';
+import classes from "./NavButton.module.scss";
 
 const NavButton = ({ event, title }) => {
   return (

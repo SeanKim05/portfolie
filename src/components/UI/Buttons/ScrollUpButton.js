@@ -1,11 +1,11 @@
-import React from 'react';
-import classes from './ScrollUpButton.module.scss';
+import React from "react";
+import classes from "./ScrollUpButton.module.scss";
 
 const ScrollUpButton = () => {
   const handleClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import classes from './DayCounter.module.scss';
+import React, { useEffect, useState } from "react";
+import classes from "./DayCounter.module.scss";
 
 const DayCounter = () => {
-  const [startDate, setStartDate] = useState('');
+  const [startDate, setStartDate] = useState("");
 
   useEffect(() => {
-    let d1 = new Date('August 1, 2022');
+    let d1 = new Date("August 1, 2022");
     let d2 = new Date();
     const time = Math.abs(d2 - d1);
     const timeToDate = Math.ceil(time / (1000 * 60 * 60 * 24));

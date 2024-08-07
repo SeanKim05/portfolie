@@ -1,4 +1,4 @@
-@import '../../styles/animation.scss';
+@import "../../styles/animation.scss";
 
 .container {
   height: 100vh;
@@ -56,7 +56,7 @@
 }
 
 @media (max-width: 500px) {
-  @import '../../styles/animation.scss';
+  @import "../../styles/animation.scss";
 
   .container {
     .hashtag_wrapper {

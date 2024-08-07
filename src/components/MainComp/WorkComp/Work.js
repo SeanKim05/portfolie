@@ -1,11 +1,11 @@
-import { useContext, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Carousel from './Carousel';
-import NavButton from '../../UI/Buttons/NavButton';
-import NavContext from '../../../context/nav-context';
-import DayCounter from './DayCounter';
-import classes from './Work.module.scss';
-import PROJECT_MOCK_DATA from '../../../data/mock.json';
+import { useContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Carousel from "./Carousel";
+import NavButton from "../../UI/Buttons/NavButton";
+import NavContext from "../../../context/nav-context";
+import DayCounter from "./DayCounter";
+import classes from "./Work.module.scss";
+import PROJECT_MOCK_DATA from "../../../data/mock.json";
 import {
   SiJavascript,
   SiCss3,
@@ -13,7 +13,7 @@ import {
   SiReact,
   SiSass,
   SiGit,
-} from 'react-icons/si';
+} from "react-icons/si";
 
 const Work = () => {
   const { yScrollVal } = useContext(NavContext);
@@ -21,7 +21,7 @@ const Work = () => {
 
   const navigate = useNavigate();
   const go_i_do = () => {
-    navigate('/iDo');
+    navigate("/iDo");
   };
 
   useEffect(() => {

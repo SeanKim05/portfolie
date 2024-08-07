@@ -1,9 +1,9 @@
-import { useState, useContext, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import classes from './MyNameDetail.module.scss';
-import NavContext from '../../context/nav-context';
-import MOCK_DATA from '../../data/mock.json';
-import { BsBackspace } from 'react-icons/bs';
+import { useState, useContext, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import classes from "./MyNameDetail.module.scss";
+import NavContext from "../../context/nav-context";
+import MOCK_DATA from "../../data/mock.json";
+import { BsBackspace } from "react-icons/bs";
 
 const HashTag = () => {
   const [fadeout, setFadeout] = useState(false);
@@ -24,7 +24,7 @@ const HashTag = () => {
   }, []);
 
   return (
-    <div className={`${classes.container} ${fadeout ? classes.fade_out : ''}`}>
+    <div className={`${classes.container} ${fadeout ? classes.fade_out : ""}`}>
       <article className={classes.hashtag_wrapper}>
         <div className={classes.back_button}>
           <BsBackspace onClick={go_back} />

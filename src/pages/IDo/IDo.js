@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
-import classes from './IDo.module.scss';
-import NavContext from '../../context/nav-context';
-import IDoFrame from '../../components/IDoComp/IDoFrame';
-import PROJECT_MOCKDATA from '../../data/mock.json';
-import ScrollButton from '../../components/UI/Buttons/ScrollButton';
-import ScrollUpButton from '../../components/UI/Buttons/ScrollUpButton';
+import React, { useContext, useEffect, useState } from "react";
+import classes from "./IDo.module.scss";
+import NavContext from "../../context/nav-context";
+import IDoFrame from "../../components/IDoComp/IDoFrame";
+import PROJECT_MOCKDATA from "../../data/mock.json";
+import ScrollButton from "../../components/UI/Buttons/ScrollButton";
+import ScrollUpButton from "../../components/UI/Buttons/ScrollUpButton";
 
 const project_data = PROJECT_MOCKDATA.project;
 
@@ -24,7 +24,7 @@ const IDo = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {

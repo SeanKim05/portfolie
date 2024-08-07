@@ -1,12 +1,12 @@
-import React from 'react';
-import classes from './Carousel.module.scss';
+import React from "react";
+import classes from "./Carousel.module.scss";
 
 const Carousel = ({ project_data }) => {
   return (
     <section className={classes.carousel_container}>
       <div className={classes.slider}>
         <div className={classes.slide_track}>
-          {project_data.map(data => (
+          {project_data.map((data) => (
             <div className={classes.slide} key={data.id}>
               <div className={classes.slide_img_wrapper}>
                 <img
@@ -23,7 +23,7 @@ const Carousel = ({ project_data }) => {
             </div>
           ))}
           {/* double */}
-          {project_data.map(data => (
+          {project_data.map((data) => (
             <div className={classes.slide} key={data.id}>
               <div className={classes.slide_img_wrapper}>
                 <img

@@ -1,5 +1,5 @@
-import React from 'react';
-import classes from './ScrollButton.module.scss';
+import React from "react";
+import classes from "./ScrollButton.module.scss";
 
 const ScrollButton = () => {
   return (

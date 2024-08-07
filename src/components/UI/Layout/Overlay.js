@@ -1,6 +1,6 @@
-import React from 'react';
-import classes from './Overlay.module.scss';
-const Overlay = props => {
+import React from "react";
+import classes from "./Overlay.module.scss";
+const Overlay = (props) => {
   return <div className={classes.backdrop}>{props.children}</div>;
 };
 

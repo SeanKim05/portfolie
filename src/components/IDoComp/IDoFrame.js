@@ -1,16 +1,16 @@
-import { useContext, useEffect } from 'react';
-import classes from './IDoFrame.module.scss';
-import NavContext from '../../context/nav-context';
-import { FaGithub } from 'react-icons/fa';
-import { SiNotion } from 'react-icons/si';
-import { HiOutlineDocumentText } from 'react-icons/hi';
+import { useContext, useEffect } from "react";
+import classes from "./IDoFrame.module.scss";
+import NavContext from "../../context/nav-context";
+import { FaGithub } from "react-icons/fa";
+import { SiNotion } from "react-icons/si";
+import { HiOutlineDocumentText } from "react-icons/hi";
 
 const IDoFrame = ({ project_data }) => {
   const { scrollHandler } = useContext(NavContext);
 
   useEffect(() => {
     scrollHandler(1);
-    document.getElementById('test_slideY').addEventListener('scroll', e => {
+    document.getElementById("test_slideY").addEventListener("scroll", (e) => {
       scrollHandler(e.currentTarget.scrollTop);
     });
   }, []);
@@ -18,7 +18,7 @@ const IDoFrame = ({ project_data }) => {
   return (
     <>
       <div className={classes.ido_container}>
-        {project_data.map(data => (
+        {project_data.map((data) => (
           <section
             key={data.id}
             className={classes.ido_slide}

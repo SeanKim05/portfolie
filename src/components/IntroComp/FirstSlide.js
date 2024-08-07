@@ -1,5 +1,5 @@
-import classes from './FirstSlide.module.scss';
-import Video from '../../assets/videos/Mountain.mp4';
+import classes from "./FirstSlide.module.scss";
+import Video from "../../assets/videos/Mountain.mp4";
 
 const FirstSlide = ({ text, title }) => {
   return (

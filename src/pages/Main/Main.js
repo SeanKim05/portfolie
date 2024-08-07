@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from 'react';
-import classes from './Main.module.scss';
-import NavContext from '../../context/nav-context';
-import ImChangeComp from '../../components/MainComp/ImChangeComp';
-import Work from '../../components/MainComp/WorkComp/Work';
-import MOCK_DATA from '../../data/mock.json';
-import ScrollButton from '../../components/UI/Buttons/ScrollButton';
+import React, { useContext, useEffect } from "react";
+import classes from "./Main.module.scss";
+import NavContext from "../../context/nav-context";
+import ImChangeComp from "../../components/MainComp/ImChangeComp";
+import Work from "../../components/MainComp/WorkComp/Work";
+import MOCK_DATA from "../../data/mock.json";
+import ScrollButton from "../../components/UI/Buttons/ScrollButton";
 
 const personal_info_data = MOCK_DATA.personal_info;
 
@@ -15,7 +15,7 @@ const Main = () => {
     scrollHandler(1);
   }, []);
 
-  const onScroll = e => {
+  const onScroll = (e) => {
     let screenY = e.currentTarget.scrollTop;
     if (screenY < 1) {
       scrollHandler(1);
@@ -25,7 +25,7 @@ const Main = () => {
   };
 
   useEffect(() => {
-    document.getElementById('main_Y').addEventListener('scroll', onScroll);
+    document.getElementById("main_Y").addEventListener("scroll", onScroll);
   }, []);
 
   return (

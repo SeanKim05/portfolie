@@ -1,4 +1,4 @@
-@import '../../styles/animation.scss';
+@import "../../styles/animation.scss";
 
 @media (max-width: 500px) {
   @mixin img_mobile_bg {
@@ -31,16 +31,16 @@
         width: 90%;
         font-size: 1rem;
         margin: 0.5rem;
-        list-style: '\2705';
+        list-style: "\2705";
       }
       span {
         li {
-          list-style-type: '\1f449';
+          list-style-type: "\1f449";
         }
       }
       ul {
         li {
-          list-style-type: '\1f449';
+          list-style-type: "\1f449";
         }
       }
 
@@ -105,16 +105,16 @@
         li {
           font-size: 1rem;
           margin: 1rem;
-          list-style: '\2705';
+          list-style: "\2705";
         }
         ul {
           font-size: 1rem;
           margin: 1rem;
-          list-style-type: '\2705';
+          list-style-type: "\2705";
         }
         ul {
           li {
-            list-style-type: '\1f449';
+            list-style-type: "\1f449";
           }
         }
 

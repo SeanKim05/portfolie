@@ -1,12 +1,12 @@
-import { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import classes from './Navigation.module.scss';
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import classes from "./Navigation.module.scss";
 
-import NavContext from '../../../context/nav-context';
-import DetailedNavigation from './DetailedNavigation';
-import logo from '../../../assets/images/logo_transparent.png';
-import { FaBars, FaGithub, FaHome } from 'react-icons/fa';
-import { SiNotion } from 'react-icons/si';
+import NavContext from "../../../context/nav-context";
+import DetailedNavigation from "./DetailedNavigation";
+import logo from "../../../assets/images/logo_transparent.png";
+import { FaBars, FaGithub, FaHome } from "react-icons/fa";
+import { SiNotion } from "react-icons/si";
 
 function Navigation() {
   const { clicked, navClickedHandler, yScrollVal } = useContext(NavContext);

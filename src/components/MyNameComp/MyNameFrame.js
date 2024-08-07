@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import classes from './MyNameFrame.module.scss';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import classes from "./MyNameFrame.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const MyNameFrame = ({ personal_info_data }) => {
   const [fadeout, setFadeout] = useState(false);
   const navigate = useNavigate();
 
-  const go_detail = paramsid => {
+  const go_detail = (paramsid) => {
     setFadeout(true);
     setTimeout(() => {
       navigate(`/myname_detail/${paramsid}`);
@@ -14,9 +14,9 @@ const MyNameFrame = ({ personal_info_data }) => {
   };
 
   return (
-    <section className={`${fadeout ? classes.fade_out : ''}`}>
+    <section className={`${fadeout ? classes.fade_out : ""}`}>
       <section className={classes.frame}>
-        {personal_info_data.map(img => (
+        {personal_info_data.map((img) => (
           <div
             className={classes.img_wrapper}
             onClick={() => {
