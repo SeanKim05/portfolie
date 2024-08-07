@@ -1,11 +1,11 @@
-import React, { useEffect, useContext } from 'react';
-import FirstSlide from '../../components/IntroComp/FirstSlide';
-import SecondSlide from '../../components/IntroComp/SecondSlide';
-import ThirdSlide from '../../components/IntroComp/ThirdSlide';
-import ScrollButton from '../../components/UI/Buttons/ScrollButton';
-import NavContext from '../../context/nav-context';
-import SLIDE_MOCK_DATA from '../../data/mock.json';
-import classes from './Intro.module.scss';
+import React, { useEffect, useContext } from "react";
+import FirstSlide from "../../components/IntroComp/FirstSlide";
+import SecondSlide from "../../components/IntroComp/SecondSlide";
+import ThirdSlide from "../../components/IntroComp/ThirdSlide";
+import ScrollButton from "../../components/UI/Buttons/ScrollButton";
+import NavContext from "../../context/nav-context";
+import SLIDE_MOCK_DATA from "../../data/mock.json";
+import classes from "./Intro.module.scss";
 
 const slide_data = SLIDE_MOCK_DATA.slide_data;
 
@@ -16,7 +16,7 @@ function Intro() {
     scrollHandler(1);
   }, []);
 
-  const onScroll = e => {
+  const onScroll = (e) => {
     let screenY = e.currentTarget.scrollTop;
     if (screenY < 1) {
       scrollHandler(1);
@@ -26,7 +26,7 @@ function Intro() {
   };
 
   useEffect(() => {
-    document.getElementById('main_slideY').addEventListener('scroll', onScroll);
+    document.getElementById("main_slideY").addEventListener("scroll", onScroll);
   }, []);
 
   return (
