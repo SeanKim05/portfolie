@@ -142,7 +142,7 @@
       "id": 5,
       "title": "Portfolio",
       "summary": "개인 포트폴리오 작업",
-      "duration": "2023/2/1 ~ (진행중)",
+      "duration": "2023/2 ~ 2023/3",
       "personnel": "개인작업",
       "img_name": "project_portfolio.png",
       "assigned": [
@@ -155,6 +155,21 @@
       "link": "https://github.com/SeanKim05/portfolio",
       "link1": "https://dorian-gorgonzola-46b.notion.site/PortFolio-82cfc8af6dfa437eb70bfe02eaa5626f",
       "link2": "https://portfolio-delta-eight-32.vercel.app/"
+    },
+    {
+      "id": 6,
+      "title": "Order Planet",
+      "summary": "테이블 QR 코드 주문 서비스",
+      "duration": "2023/4 ~ 2024/4",
+      "personnel": "경력",
+      "img_name": "order_planet.png",
+      "assigned": [
+        "i18n 사용을 통한 4개 국어 번역 지원",
+        "antD을 통한 사용자 친화적 UI 구성",
+        "QR 코드 스캐닝 웹 연결 지원",
+        "ABA Pay 캄보디아 결제 모듈 연동 테스트 작업"
+      ],
+      "link": "https://portfolio-delta-eight-32.vercel.app/"
     }
   ]
 }
