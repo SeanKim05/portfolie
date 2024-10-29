@@ -16,54 +16,52 @@ const IDoFrame = ({ project_data }) => {
   }, []);
 
   return (
-    <>
-      <div className={classes.ido_container}>
-        {project_data.map((data) => (
-          <section
-            key={data.id}
-            className={classes.ido_slide}
-            style={{
-              backgroundImage: `URL(${require(`../../assets/images/${data.img_name}`)})`,
-            }}
-          >
-            <div className={classes.ido_card_wrapper}>
-              <h1>&nbsp;{data.title}</h1>
-              <li>
-                <span>&nbsp;요약:</span> {data.summary}
-              </li>
-              <li>
-                <span>&nbsp;기간:</span> {data.duration}
-              </li>
-              <li>
-                <span>&nbsp;인원:</span> {data.personnel}
-              </li>
-              <li>
-                &nbsp;담당파트:
-                <ul>
-                  {data.assigned.map((work, i) => (
-                    <li key={i}>&nbsp;{work}</li>
-                  ))}
-                </ul>
-              </li>
-              <li>
-                &nbsp;바로가기&nbsp;
-                <div className={classes.ido_link}>
-                  <a href={data.link}>
-                    <FaGithub alt="github" /> 깃허브&nbsp;
-                  </a>
-                  <a href={data.link1}>
-                    <SiNotion alt="github" /> 코드설명&nbsp;
-                  </a>
-                  <a href={data.link2}>
-                    <HiOutlineDocumentText alt="deployed" /> 시연 페이지&nbsp;
-                  </a>
-                </div>
-              </li>
-            </div>
-          </section>
-        ))}
-      </div>
-    </>
+    <div className={classes.ido_container}>
+      {project_data.map((data) => (
+        <section
+          key={data.id}
+          className={classes.ido_slide}
+          style={{
+            backgroundImage: `URL(${require(`../../assets/images/${data.img_name}`)})`,
+          }}
+        >
+          <div className={classes.ido_card_wrapper}>
+            <h1>&nbsp;{data.title}</h1>
+            <li>
+              <span>&nbsp;요약:</span> {data.summary}
+            </li>
+            <li>
+              <span>&nbsp;기간:</span> {data.duration}
+            </li>
+            <li>
+              <span>&nbsp;인원:</span> {data.personnel}
+            </li>
+            <li>
+              &nbsp;담당파트:
+              <ul>
+                {data.assigned.map((work, i) => (
+                  <li key={i}>&nbsp;{work}</li>
+                ))}
+              </ul>
+            </li>
+            <li>
+              &nbsp;바로가기&nbsp;
+              <div className={classes.ido_link}>
+                <a href={data.link}>
+                  <FaGithub alt="github" /> 깃허브&nbsp;
+                </a>
+                <a href={data.link1}>
+                  <SiNotion alt="github" /> 코드설명&nbsp;
+                </a>
+                <a href={data.link2}>
+                  <HiOutlineDocumentText alt="deployed" /> 시연 페이지&nbsp;
+                </a>
+              </div>
+            </li>
+          </div>
+        </section>
+      ))}
+    </div>
   );
 };
 

@@ -72,74 +72,36 @@
   "project": [
     {
       "id": 0,
-      "title": "Roecy",
-      "img_name": "project_roecy.png",
-      "summary": "ROYCE Chocolate 공식 홈페이지 클론 프로젝트",
-      "duration": "2022-08-29 ~ 2022-09-08 (2주)",
-      "personnel": "6명(Front-end: 4명, 백엔드: 2명)",
-      "assigned": ["회원가입&로그인", "마이페이지", "문의페이지"],
-      "link": "https://github.com/SeanKim05/1st_project_roecy",
-      "link1": "https://dorian-gorgonzola-46b.notion.site/1-Roecy-29b07ad7a7bd46959bb963902a903029",
-      "link2": "https://www.youtube.com/watch?v=S9G8jmITVRc"
+      "title": "Order Planet",
+      "summary": "테이블 QR 코드 주문 서비스",
+      "duration": "2023/4 ~ 2024/4",
+      "personnel": "경력",
+      "img_name": "order_planet.png",
+      "assigned": [
+        "i18n 사용을 통한 4개 국어 번역 지원",
+        "antD을 통한 사용자 친화적 UI 구성",
+        "QR 코드 스캐닝 웹 연결 지원",
+        "ABA Pay 결제 모듈 연동 테스트 작업"
+      ],
+      "link": "https://portfolio-delta-eight-32.vercel.app/"
     },
     {
       "id": 1,
-      "title": "사조의 공방",
-      "img_name": "project_sajo.png",
-      "summary": "모두의 공방 프로젝트",
-      "duration": "2022-09-19 ~ 2022-09-30 (2주)",
-      "personnel": "6명(Front-end: 3명, 백엔드: 2명)",
-      "assigned": ["회원가입&로그인", "마이페이지", "상품리뷰 페이지"],
-      "link": "https://github.com/SeanKim05/2nd_project_sajo_workshop",
-      "link1": "https://dorian-gorgonzola-46b.notion.site/2-e4a85349b5674e4bac3e947e958d0520",
-      "link2": "https://www.youtube.com/watch?v=0NputbNx3_s"
+      "title": "같이달램",
+      "summary": "직장인 힐링 소모임 커뮤니티",
+      "duration": "2024/9 ~ 2024/10",
+      "personnel": "경력",
+      "img_name": "project_gather.png",
+      "assigned": [
+        "Next.js App router를 이용한 페이지 구성",
+        "SSR과 CSR 적용 페이지네이션 구현",
+        "Framer motion을 사용한 animation 적용"
+      ],
+      "link": "https://coreal-repo.vercel.app/gatherings"
     },
+
     {
       "id": 2,
-      "title": "HAII",
-      "summary": "HAII 기업협업 과제",
-      "duration": "2022/10/11 ~ 2022/10/14 (3일)",
-      "personnel": "Front-end: 3명",
-      "img_name": "project_haii.png",
-      "assigned": [
-        "녹음 시 시간 및 음성에 대한 파형 표시",
-        "녹음 시 시간 및 음성에 대한 파형 표시",
-        "타이머 연동으로 시간별 녹화(30초, 1분, 5분)가능",
-        "녹음된 파일 저장기능 추가"
-      ],
-      "link": "https://github.com/SeanKim05/project_haii",
-      "link1": "https://dorian-gorgonzola-46b.notion.site/HAII-e438d69a4c124abea867958b61217985",
-      "link2": "https://project-haii.vercel.app/"
-    },
-    {
-      "id": 3,
-      "title": "Bodit",
-      "summary": "Bodit 기업협업 과제",
-      "duration": "2022/10/04 ~ 2022/10/06",
-      "personnel": "Front-end: 3명",
-      "img_name": "project_bodit.png",
-      "assigned": [
-        "배터리 상태에 따른 값 표 렌더링",
-        "마우스 hover시 row 스타일 변경"
-      ],
-      "link": "https://github.com/SeanKim05/poject_bodit",
-      "link1": "https://dorian-gorgonzola-46b.notion.site/Bodit-998f3e6ebae94aec8115dd220edcf82b",
-      "link2": "https://seankim05.github.io/bodit-team2/"
-    },
-    {
-      "id": 4,
-      "title": "Winning-I",
-      "summary": "Winning 기업협업 과제",
-      "duration": "2022/10/17 ~ 2022/10/20 (3일)",
-      "personnel": "개인작업",
-      "img_name": "project_winningi.png",
-      "assigned": ["로그인", "메인페이지(그래프)", "게시글 페이지 "],
-      "link": "https://github.com/SeanKim05/winning-i",
-      "link1": "https://dorian-gorgonzola-46b.notion.site/WINNING-I-aa57b4b77d0a472bb6ed1acb68aa905e",
-      "link2": "https://winning-3lzs2o3sm-seankim05.vercel.app/"
-    },
-    {
-      "id": 5,
       "title": "Portfolio",
       "summary": "개인 포트폴리오 작업",
       "duration": "2023/2 ~ 2023/3",
@@ -157,19 +119,28 @@
       "link2": "https://portfolio-delta-eight-32.vercel.app/"
     },
     {
-      "id": 6,
-      "title": "Order Planet",
-      "summary": "테이블 QR 코드 주문 서비스",
-      "duration": "2023/4 ~ 2024/4",
-      "personnel": "경력",
-      "img_name": "order_planet.png",
-      "assigned": [
-        "i18n 사용을 통한 4개 국어 번역 지원",
-        "antD을 통한 사용자 친화적 UI 구성",
-        "QR 코드 스캐닝 웹 연결 지원",
-        "ABA Pay 캄보디아 결제 모듈 연동 테스트 작업"
-      ],
-      "link": "https://portfolio-delta-eight-32.vercel.app/"
+      "id": 3,
+      "title": "사조의 공방",
+      "img_name": "project_sajo.png",
+      "summary": "모두의 공방 프로젝트",
+      "duration": "2022-09-19 ~ 2022-09-30 (2주)",
+      "personnel": "6명(Front-end: 3명, 백엔드: 2명)",
+      "assigned": ["회원가입&로그인", "마이페이지", "상품리뷰 페이지"],
+      "link": "https://github.com/SeanKim05/2nd_project_sajo_workshop",
+      "link1": "https://dorian-gorgonzola-46b.notion.site/2-e4a85349b5674e4bac3e947e958d0520",
+      "link2": "https://www.youtube.com/watch?v=0NputbNx3_s"
+    },
+    {
+      "id": 4,
+      "title": "Roecy",
+      "img_name": "project_roecy.png",
+      "summary": "ROYCE Chocolate 공식 홈페이지 클론 프로젝트",
+      "duration": "2022-08-29 ~ 2022-09-08 (2주)",
+      "personnel": "6명(Front-end: 4명, 백엔드: 2명)",
+      "assigned": ["회원가입&로그인", "마이페이지", "문의페이지"],
+      "link": "https://github.com/SeanKim05/1st_project_roecy",
+      "link1": "https://dorian-gorgonzola-46b.notion.site/1-Roecy-29b07ad7a7bd46959bb963902a903029",
+      "link2": "https://www.youtube.com/watch?v=S9G8jmITVRc"
     }
   ]
 }

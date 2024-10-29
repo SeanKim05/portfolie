@@ -41,12 +41,12 @@ function Navigation() {
               >
                 <FaGithub alt="github" />
               </a>
-              <a
+              {/* <a
                 href="https://dorian-gorgonzola-46b.notion.site/74eef0a73ad04982a0927137ac1eaeb0"
                 style={{ opacity: 10 / yScrollVal }}
               >
                 <SiNotion alt="Notion" />
-              </a>
+              </a> */}
             </div>
           </div>
         </nav>
