@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import FirstSlide from "../../components/IntroComp/FirstSlide";
 import SecondSlide from "../../components/IntroComp/SecondSlide";
 import ThirdSlide from "../../components/IntroComp/ThirdSlide";
@@ -11,26 +11,37 @@ const slide_data = SLIDE_MOCK_DATA.slide_data;
 
 function Intro() {
   const { scrollHandler } = useContext(NavContext);
+  const containerRef = useRef(null); // DOM 접근을 위한 useRef
+  const throttleTimeout = useRef(null); // 스로틀링 타이머
 
   useEffect(() => {
-    scrollHandler(1);
+    scrollHandler(1); // 초기화
   }, []);
 
+  // 스로틀링 적용된 스크롤 핸들러
   const onScroll = (e) => {
-    let screenY = e.currentTarget.scrollTop;
-    if (screenY < 1) {
-      scrollHandler(1);
-    } else {
-      scrollHandler(screenY);
-    }
+    if (throttleTimeout.current) return;
+
+    throttleTimeout.current = setTimeout(() => {
+      const scrollTop = e.target.scrollTop;
+
+      // 상태 업데이트 최소화
+      scrollHandler(scrollTop || 1);
+      throttleTimeout.current = null;
+    }, 100); // 100ms 간격으로 스로틀링
   };
 
   useEffect(() => {
-    document.getElementById("main_slideY").addEventListener("scroll", onScroll);
+    const container = containerRef.current;
+    container.addEventListener("scroll", onScroll);
+
+    return () => {
+      container.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return (
-    <div className={classes.main_container} id="main_slideY">
+    <div className={classes.main_container} ref={containerRef} id="main_slideY">
       <section className={classes.slide_main_scroll_section}>
         <FirstSlide title={slide_data[0].title} text={slide_data[0].text} />
         <ScrollButton />

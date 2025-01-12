@@ -21,15 +21,13 @@ const ThirdSlide = ({ title, text }) => {
   return (
     <section className={classes.main_container}>
       {scrollReached && (
-        <>
-          <div className={classes.caption_wrapper}>
-            <h1>{title}</h1>
-            <p>{text[0]}</p>
-            <h2>{text[1]}</h2>
-            <NavButton title={"여정 둘러보기"} event={goMain} />
-          </div>
-          <div className={classes.caption_nav_button}></div>
-        </>
+        <div className={classes.caption_wrapper}>
+          <h1>{title}</h1>
+          <p>{text[0]}</p>
+          <h2>{text[1]}</h2>
+          <NavButton title="여정 둘러보기" event={goMain} />
+          <div className={classes.caption_nav_button} />
+        </div>
       )}
     </section>
   );
