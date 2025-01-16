@@ -20,15 +20,14 @@ function Intro() {
 
   // 스로틀링 적용된 스크롤 핸들러
   const onScroll = (e) => {
-    if (throttleTimeout.current) return;
-
-    throttleTimeout.current = setTimeout(() => {
-      const scrollTop = e.target.scrollTop;
-
-      // 상태 업데이트 최소화
-      scrollHandler(scrollTop || 1);
-      throttleTimeout.current = null;
-    }, 100); // 100ms 간격으로 스로틀링
+    if (!throttleTimeout.current) {
+      throttleTimeout.current = setTimeout(() => {
+        const scrollTop = e.target.scrollTop;
+        scrollHandler(scrollTop || 1);
+        // 타이머 초기화
+        throttleTimeout.current = null;
+      }, 400);
+    }
   };
 
   useEffect(() => {
