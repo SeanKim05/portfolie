@@ -7,37 +7,45 @@ import NavContext from "../../context/nav-context";
 import SLIDE_MOCK_DATA from "../../data/mock.json";
 import classes from "./Intro.module.scss";
 
+// 1. Make a reusable rAF helper.
+function rAFScroll(callback) {
+  let ticking = false;
+
+  return function handler() {
+    if (ticking) return;
+    ticking = true;
+
+    requestAnimationFrame(() => {
+      ticking = false;
+      callback();
+    });
+  };
+}
+
 const slide_data = SLIDE_MOCK_DATA.slide_data;
 
 function Intro() {
   const { scrollHandler } = useContext(NavContext);
-  const containerRef = useRef(null); // DOM 접근을 위한 useRef
-  const throttleTimeout = useRef(null); // 스로틀링 타이머
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    scrollHandler(1); // 초기화
+    // 초기화 (맨 처음 마운트 시 값 세팅)
+    scrollHandler(1);
   }, []);
-
-  // 스로틀링 적용된 스크롤 핸들러
-  const onScroll = (e) => {
-    if (!throttleTimeout.current) {
-      throttleTimeout.current = setTimeout(() => {
-        const scrollTop = e.target.scrollTop;
-        scrollHandler(scrollTop || 1);
-        // 타이머 초기화
-        throttleTimeout.current = null;
-      }, 400);
-    }
-  };
 
   useEffect(() => {
     const container = containerRef.current;
+
+    const onScroll = rAFScroll(() => {
+      const scrollTop = container.scrollTop || 1;
+      scrollHandler(scrollTop);
+    });
     container.addEventListener("scroll", onScroll);
 
     return () => {
       container.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  }, [scrollHandler]);
 
   return (
     <div className={classes.main_container} ref={containerRef} id="main_slideY">

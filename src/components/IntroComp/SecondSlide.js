@@ -10,11 +10,8 @@ const SecondSlide = ({ text, title }) => {
   useEffect(() => {
     if (yScrollVal > 500) {
       setScrollReached(true);
-    } else {
-      setScrollReached(false);
     }
   }, [yScrollVal]);
-
   return (
     <section className={classes.main_container}>
       {scrollReached && (
