@@ -44,20 +44,6 @@ const IDoFrame = ({ project_data }) => {
                 ))}
               </ul>
             </li>
-            <li>
-              &nbsp;바로가기&nbsp;
-              <div className={classes.ido_link}>
-                <a href={data.link}>
-                  <FaGithub alt="github" /> 깃허브&nbsp;
-                </a>
-                <a href={data.link1}>
-                  <SiNotion alt="github" /> 코드설명&nbsp;
-                </a>
-                <a href={data.link2}>
-                  <HiOutlineDocumentText alt="deployed" /> 시연 페이지&nbsp;
-                </a>
-              </div>
-            </li>
           </div>
         </section>
       ))}

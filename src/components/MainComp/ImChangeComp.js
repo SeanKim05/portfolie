@@ -14,7 +14,8 @@ function ImChangeComp({ personal_info_data }) {
   }, [personal_info_data]);
 
   useEffect(() => {
-    setInterval(shuffle, 1000);
+    const intervalId = setInterval(shuffle, 1000);
+    return () => clearInterval(intervalId);
   }, [shuffle]);
 
   const navigate = useNavigate();
